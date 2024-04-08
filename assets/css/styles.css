@@ -13,26 +13,24 @@
     /* HSL color mode */
     --hue-color: 181;
     /* Primary color directly replaced with your chosen color */
-    --first-color: hsl(181, 25%, 55%);
-    --first-color-second: hsl(181, 25%, 55%);
+    --first-color: hsl(var(--hue-color), 25%, 55%);
+    --first-color-second: hsl(var(--hue-color), 25%, 55%);
     /* Slightly adjust for alternative and lighter versions */
-    --first-color-alt: hsl(181, 22%, 50%);
-    --first-color-lighter: hsl(181, 40%, 75%);
+    --first-color-alt: hsl(var(--hue-color), 22%, 50%);
+    --first-color-lighter: hsl(var(--hue-color), 40%, 75%);
     /* Adjust text colors for readability */
-    --title-color: hsl(181, 8%, 15%);
-    --text-color: hsl(181, 8%, 45%);
-    --text-color-light: hsl(181, 8%, 65%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
     /* Keep background colors light and slightly tinted */
-    --input-color: hsl(181, 15%, 96%);
-    --body-color: hsl(181, 10%, 99%);
+    --input-color: hsl(var(--hue-color), 15%, 96%);
+    --body-color: hsl(var(--hue-color), 10%, 99%);
     --container-color: #fff;
     /* Scroll bar colors for subtle visibility */
-    --scroll-bar-color: hsl(181, 12%, 90%);
-    --scroll-thumb-color: hsl(181, 12%, 80%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-    
-/*   
-    HSL color mode
+    /*   HSL color mode
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
