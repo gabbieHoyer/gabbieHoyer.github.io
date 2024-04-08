@@ -417,8 +417,16 @@ img {
 }
 
 /*==================== ABOUT ====================*/
-.about__img {
+/* .about__img {
   width: 200px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
+} */
+
+.about__img {
+  width: 50%; /* Adjust the percentage as needed */
+  max-width: 300px; /* The max-width you want for larger screens */
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
