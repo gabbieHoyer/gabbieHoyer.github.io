@@ -967,6 +967,26 @@ img {
   color: var(--first-color);
 }
 
+
+
+.publication__modal-services {
+  row-gap: 1rem;
+}
+
+.publication__modal-service {
+  display: flex;
+}
+
+.publication__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.publication__modal-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}
 /* PUBLICATION END */
 
 
