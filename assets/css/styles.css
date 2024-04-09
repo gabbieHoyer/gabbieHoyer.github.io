@@ -934,27 +934,6 @@ img {
   margin-bottom: var(--mb-1);
 }
 
-.publication__calendar {
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
-}
-
-.publication__rounder {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  background-color: var(--first-color);
-  border-radius: 50%;
-}
-
-.publication__line {
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: var(--first-color);
-  transform: translate(6px, -7px);
-}
-
 .publication [data-content] {
   display: none;
 }
@@ -968,6 +947,12 @@ img {
 }
 
 
+.publication__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
 
 .publication__modal-publication {
   row-gap: 1rem;
@@ -1237,9 +1222,18 @@ scrollup {
     padding: 0 .5rem;
   }
 
+  /* ------------ */
   .publication__data {
     gap: .5rem;
   }
+  /* .publication__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+  } */
+  .publication__content {
+    padding-right: 3.5rem;
+  }
+  /* ------------ */
 
   .project__img {
     width: 200px;
@@ -1273,6 +1267,7 @@ scrollup {
   .skills__container,
   .portfolio__content,
   .project__container,
+  .publication__container,
   .contact__container,
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
@@ -1400,6 +1395,7 @@ scrollup {
   }
 
 
+  /*  note - different project - projects in mind */
   .project {
     text-align: initial;
   }
