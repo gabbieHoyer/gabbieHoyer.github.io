@@ -1024,7 +1024,8 @@ img {
 .project__bg {
   background-color: var(--first-color-second);
   padding-top: 3rem;
-  padding-bottom: 3rem; /* Adjust this value as needed */
+  /* padding-bottom: 3rem;  */
+
 }
 
 .project__title {
@@ -1454,6 +1455,7 @@ scrollup {
   .project__data {
     padding-top: .8rem;
   }
+
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1509,6 +1511,15 @@ scrollup {
   .testimonial__description {
     margin-bottom: 4rem;
   }
+
+  .project__container {
+    background-color: var(--first-color-second);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem 3rem; /* Adjust the last value to add padding-bottom */
+    grid-template-columns: 1fr max-content;
+    column-gap: 3rem;
+  }
+
   .contact__form {
     width: 460px;
   }
