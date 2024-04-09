@@ -1024,6 +1024,7 @@ img {
 .project__bg {
   background-color: var(--first-color-second);
   padding-top: 3rem;
+  padding-bottom: 2rem; /* Adjust this value as needed */
 }
 
 .project__title {
