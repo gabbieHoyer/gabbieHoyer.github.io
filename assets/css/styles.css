@@ -759,6 +759,31 @@ img {
   visibility: visible;
 }
 
+/*================== RESOURCE LINKS ==================*/
+
+.resource-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em; /* or other spacing to suit your design */
+}
+
+.resource-links a {
+  text-decoration: none;
+  color: var(--first-color-second); /* a less prominent color */
+  font-size: 0.8em; /* smaller text */
+}
+
+.resource-links i {
+  font-size: 1em; /* smaller icons to match */
+  margin-right: 0.5em;
+}
+
+.link-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
   overflow: initial;
