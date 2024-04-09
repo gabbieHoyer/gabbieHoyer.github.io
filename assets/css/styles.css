@@ -531,83 +531,102 @@ img {
 .skills__exp_design {
   width: 90%;
 }
+
 .skills__stat_analysis {
-  width: 85%;
+  width: 80%;
 }
+
 .skills__pred_analysis {
   width: 80%;
 }
+
 .skills__stat_model {
-  width: 80%;
+  width: 75%;
 }
+
 .skills__tech_write {
-  width: 95%;
+  width: 90%;
 }
+
 .skills__oral_commun {
   width: 95%;
 }
+
 .skills__ind_research {
   width: 95%;
 }
+
 .skills__bio_inform {
   width: 85%;
 }
 
-
 .skills__python {
   width: 95%;
 }
+
 .skills__matlab {
   width: 90%;
 }
+
 .skills__javascript {
   width: 80%;
 }
+
 .skills__ml {
   width: 85%;
 }
+
 .skills__cv {
-  width: 80%;
+  width: 75%;
 }
+
 .skills__pytorch {
   width: 90%;
 }
+
 .skills__dist_comp {
   width: 85%;
 }
+
 .skills__mri_phys {
   width: 70%;
 }
 
-
 .skills__prod_dev {
   width: 90%;
 }
+
 .skills__clin_dev {
-  width: 60%;
+  width: 55%;
 }
+
 .skills__reg_comp {
   width: 80%;
 }
+
 .skills__prod_man {
   width: 90%;
 }
+
 .skills__pub_speak {
   width: 95%;
 }
+
 .skills__stakeholder_comm {
   width: 90%;
 }
+
 .skills__team_lead {
   width: 90%;
 }
+
 .skills__eng_design {
   width: 90%;
 }
+
 .skills__git {
   width: 80%;
 }
-
 
 .skills__close .skills__list {
   height: 0px;
