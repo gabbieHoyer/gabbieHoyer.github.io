@@ -917,11 +917,11 @@ img {
   margin-right: var(--mb-0-25);
 }
 
-.publication__data {
+/* .publication__data {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
-}
+} */
 
 .publication__title {
   font-size: var(--normal-font-size);
@@ -947,6 +947,37 @@ img {
 }
 
 
+.publication__data {
+  display: block; /* Use block for a cleaner layout without grid complexities */
+}
+
+.publication__modal-publication {
+  margin-bottom: 1rem; /* Add space between list items */
+}
+
+/* Add styling for paragraph descriptions if needed */
+.publication__description {
+  margin-bottom: var(--mb-1); /* Adjust as needed */
+}
+
+/* 
+.publication__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
 .publication__modal-content {
   position: relative;
   background-color: var(--container-color);
@@ -968,10 +999,20 @@ img {
   margin-bottom: var(--mb-1-5);
 }
 
+.publication__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
 .publication__modal-icon {
   color: var(--first-color);
   margin-right: var(--mb-0-25);
-}
+} */
+
 /* PUBLICATION END */
 
 
