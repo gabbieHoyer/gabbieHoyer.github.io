@@ -366,7 +366,6 @@ img {
   font-size: 1.25rem;
 }
 
-
 /*==================== BUTTONS ====================*/
 .button {
   display: inline-block;
@@ -417,12 +416,6 @@ img {
 }
 
 /*==================== ABOUT ====================*/
-/* .about__img {
-  width: 200px;
-  border-radius: .5rem;
-  justify-self: center;
-  align-self: center;
-} */
 
 .about__img {
   width: 50%; /* Adjust the percentage as needed */
@@ -714,7 +707,7 @@ img {
   color: var(--first-color);
 }
 
-/*==================== SERVICES ====================*/
+/*==================== SERVICES / PROJECTS ====================*/
 
 .services__container {
   gap: 1.5rem;
@@ -899,6 +892,84 @@ img {
 .swiper-pagination-bullet {
   outline: none;
 }
+
+
+/* PUBLICATION START */
+publication
+/*==================== PUBLICATION ====================*/
+.publication__tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2);
+}
+
+.publication__button {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+
+.publication__button:hover {
+  color: var(--first-color);
+}
+
+.publication__icon {
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+
+.publication__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+
+.publication__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.publication__subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.publication__calendar {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.publication__rounder {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+.publication__line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--first-color);
+  transform: translate(6px, -7px);
+}
+
+.publication [data-content] {
+  display: none;
+}
+
+.publication__active[data-content] {
+  display: block;
+}
+
+.publication__button.publication__active {
+  color: var(--first-color);
+}
+
+/* PUBLICATION END */
+
 
 /*==================== PROJECT IN MIND ====================*/
 .project {
@@ -1146,6 +1217,11 @@ scrollup {
   .services__modal {
     padding: 0 .5rem;
   }
+
+  .publication__data {
+    gap: .5rem;
+  }
+
   .project__img {
     width: 200px;
   }
@@ -1183,6 +1259,11 @@ scrollup {
     grid-template-columns: repeat(2, 1fr);
   }
   .qualification__sections {
+    display: grid;
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
+  .publication__sections {
     display: grid;
     grid-template-columns: .6fr;
     justify-content: center;
@@ -1288,6 +1369,18 @@ scrollup {
   .portfolio__content {
     align-items: center;
   }
+
+  .publication__tabs {
+    justify-content: center;
+  }
+  .publication__button {
+    margin: 0 var(--mb-1);
+  }
+  .publication__sections {
+    grid-template-columns: .5fr;
+  }
+
+
   .project {
     text-align: initial;
   }

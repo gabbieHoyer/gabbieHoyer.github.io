@@ -106,6 +106,27 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
     },
 })
 
+/*==================== Pulications TABS ====================*/
+const tabs_pub = document.querySelectorAll('[data-target]'),
+tabContents_pub = document.querySelectorAll('[data-content]')
+
+tabs_pub.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target)
+        
+        tabContents_pub.forEach(tabContent_pub => {
+            tabContent_pub.classList.remove('publication__active')
+        })
+        target.classList.add('publication__active')
+        
+        tabs_pub.forEach(tab => {
+            tab.classList.remove('publication__active')
+        })
+        tab.classList.add('publication__active')
+    })
+})
+
+
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper('.testimonial__container', {
     loop: true,
