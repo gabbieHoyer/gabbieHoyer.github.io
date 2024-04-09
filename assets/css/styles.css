@@ -917,23 +917,6 @@ img {
   margin-right: var(--mb-0-25);
 }
 
-/* .publication__data {
-  display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1.5rem;
-} */
-
-.publication__title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-}
-
-.publication__subtitle {
-  display: inline-block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
-}
-
 .publication [data-content] {
   display: none;
 }
@@ -946,19 +929,84 @@ img {
   color: var(--first-color);
 }
 
+/* Set the background and text color for the publication section */
+.publication__container {
+  background-color: var(--container-color); /* Your preferred background color */
+  color: var(--text-color); /* Your preferred text color */
+}
 
-.publication__data {
-  display: block; /* Use block for a cleaner layout without grid complexities */
+/* Style the titles in the publication section */
+.publication__title {
+  font-size: var(--h2-font-size); /* Match the size to your section titles */
+  font-weight: var(--font-semi-bold); /* Adjust weight as needed */
+  color: var(--title-color); /* Your color for titles */
+}
+
+/* Style the subtitles in the publication section */
+.publication__subtitle {
+  display: block; /* change to block to give it its own line if needed */
+  font-size: var(--small-font-size);
+  color: var(--subtitle-color); /* Your color for subtitles */
+  margin-bottom: var(--mb-0-5); /* Adjust margin as needed */
+}
+
+/* Style the publication descriptions */
+.publication__description {
+  margin-bottom: var(--mb-1); /* Adjust as needed */
+  padding: var(--padding); /* Adjust padding as needed */
+  background-color: var(--second-background-color); /* Secondary background color if needed */
+  border-radius: var(--border-radius); /* Optional border radius */
+}
+
+/* Apply resource links style to the publication links */
+.publication__data a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--first-color); /* Primary color for links */
+  font-size: var(--normal-font-size); /* Adjust font size as needed */
+  margin-top: var(--mb-1); /* Spacing after the description */
+}
+
+.publication__data a i {
+  font-size: 1em;
+  margin-right: var(--mb-0-25); /* Adjust icon spacing as needed */
+}
+
+.publication__data .link-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* .publication__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+} */
+/* 
+.publication__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.publication__subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+} */
+
+/* .publication__data {
+  display: block; 
 }
 
 .publication__modal-publication {
-  margin-bottom: 1rem; /* Add space between list items */
+  margin-bottom: 1rem; 
 }
 
-/* Add styling for paragraph descriptions if needed */
 .publication__description {
-  margin-bottom: var(--mb-1); /* Adjust as needed */
-}
+  margin-bottom: var(--mb-1); 
+} */
 
 /* 
 .publication__modal {
