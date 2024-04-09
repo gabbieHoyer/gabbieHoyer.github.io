@@ -969,11 +969,11 @@ img {
 
 
 
-.publication__modal-services {
+.publication__modal-publication {
   row-gap: 1rem;
 }
 
-.publication__modal-service {
+.publication__modal-publication {
   display: flex;
 }
 
