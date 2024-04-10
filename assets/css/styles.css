@@ -937,7 +937,7 @@ img {
 
 /* Style the titles in the publication section */
 .publication__title {
-  font-size: var(--h2-font-size); /* Match the size to your section titles */
+  font-size: var(--h3-font-size); /* Match the size to your section titles */
   font-weight: var(--font-semi-bold); /* Adjust weight as needed */
   color: var(--title-color); /* Your color for titles */
 }
