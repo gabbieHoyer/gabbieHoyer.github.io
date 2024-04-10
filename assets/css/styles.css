@@ -1309,7 +1309,8 @@ scrollup {
   }
   .publication__sections {
     display: grid;
-    grid-template-columns: .6fr;
+    /* grid-template-columns: .6fr; */
+    grid-template-columns: 1fr;
     justify-content: center;
   }
 }
@@ -1420,8 +1421,13 @@ scrollup {
   .publication__button {
     margin: 0 var(--mb-1);
   }
-  .publication__sections {
+  /* .publication__sections {
     grid-template-columns: .5fr;
+  } */
+
+  .publication__sections {
+    /* grid-template-columns: .6fr; */
+    grid-template-columns: 1fr;
   }
 
 
