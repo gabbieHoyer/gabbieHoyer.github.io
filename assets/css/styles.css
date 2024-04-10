@@ -912,10 +912,10 @@ img {
   color: var(--first-color);
 }
 
-/* .publication__icon {
+.publication__icon {
   font-size: 1.8rem;
   margin-right: var(--mb-0-25);
-} */
+}
 
 .publication [data-content] {
   display: none;
@@ -936,11 +936,11 @@ img {
 }
 
 /* Style the titles in the publication section */
-/* .publication__title { */
-  /* font-size: var(--h2-font-size); Match the size to your section titles */
-  /* font-weight: var(--font-semi-bold); Adjust weight as needed */
-  /* color: var(--title-color); Your color for titles */
-/* } */
+.publication__title {
+  font-size: var(--h2-font-size); /* Match the size to your section titles */
+  font-weight: var(--font-semi-bold); /* Adjust weight as needed */
+  color: var(--title-color); /* Your color for titles */
+}
 
 /* Style the subtitles in the publication section */
 .publication__subtitle {
@@ -950,13 +950,13 @@ img {
   margin-bottom: var(--mb-0-5); /* Adjust margin as needed */
 }
 
-/* Style the publication descriptions
+/* Style the publication descriptions */
 .publication__description {
-  margin-bottom: var(--mb-1);
-  padding: var(--padding); 
-  background-color: var(--second-background-color); 
-  border-radius: var(--border-radius); 
-} */
+  margin-bottom: var(--mb-1); /* Adjust as needed */
+  padding: var(--padding); /* Adjust padding as needed */
+  background-color: var(--second-background-color); /* Secondary background color if needed */
+  border-radius: var(--border-radius); /* Optional border radius */
+}
 
 /* Apply resource links style to the publication links */
 .publication__data a {
@@ -965,70 +965,101 @@ img {
   text-decoration: none;
   color: var(--first-color); /* Primary color for links */
   font-size: var(--normal-font-size); /* Adjust font size as needed */
-  
   margin-top: var(--mb-1); /* Spacing after the description */
 }
 
-/* .publication__data a i {
+.publication__data a i {
   font-size: 1em;
-  margin-right: var(--mb-0-25); 
-} */
+  margin-right: var(--mb-0-25); /* Adjust icon spacing as needed */
+}
 
-/* .publication__data .link-text {
+.publication__data .link-text {
   display: inline-block;
   vertical-align: middle;
+}
+
+
+/* .publication__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+} */
+/* 
+.publication__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.publication__subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
 } */
 
-/* ------------------------- */
-.publication__title-bullet {
-  display: flex;
-  align-items: center;
+/* .publication__data {
+  display: block; 
 }
 
-.publication__icon {
-  color: var(--first-color);
-  margin-right: var(--mb-0-25);
-  font-size: 1.25rem; /* Adjust size as needed */
-}
-
-.publication__title {
-  font-size: var(--medium-font-size); /* Adjust to make the title smaller */
-  margin: 0;
+.publication__modal-publication {
+  margin-bottom: 1rem; 
 }
 
 .publication__description {
-  text-align: left; /* Align the text to the left */
-  margin-top: var(--mb-0-5); /* Add some space above the description */
-  margin-bottom: var(--mb-0-5); /* Add some space below the description before the links */
-}
+  margin-bottom: var(--mb-1); 
+} */
 
-.resource-links {
-  list-style: none; /* Remove default list styling */
-  padding-left: 0; /* Remove default padding */
-  display: flex;
-  flex-direction: column; /* Stack links vertically */
-  gap: var(--mb-0-5); /* Adjust gap between links */
-}
-
-.resource-links a {
-  text-decoration: none;
-  color: var(--first-color-second);
-  font-size: var(--small-font-size);
+/* 
+.publication__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
 }
 
-.resource-links i {
-  font-size: var(--icon-size); /* Adjust to your icon size */
+.publication__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.publication__modal-publication {
+  row-gap: 1rem;
+}
+
+.publication__modal-publication {
+  display: flex;
+}
+
+.publication__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.publication__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.publication__modal-icon {
+  color: var(--first-color);
   margin-right: var(--mb-0-25);
-}
-
-.link-text {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-
+} */
 
 /* PUBLICATION END */
 
