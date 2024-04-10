@@ -937,7 +937,8 @@ img {
 
 /* Style the titles in the publication section */
 .publication__title {
-  font-size: var(--h3-font-size); /* Match the size to your section titles */
+  font-size: var(--small-font-size) ;
+  font-size: var(--h3-font-size); 
   font-weight: var(--font-semi-bold); /* Adjust weight as needed */
   color: var(--title-color); /* Your color for titles */
 }
@@ -953,7 +954,7 @@ img {
 /* Style the publication descriptions */
 .publication__description {
   /* margin-bottom: var(--mb-1);  */
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   padding: var(--padding); /* Adjust padding as needed */
   background-color: var(--second-background-color); /* Secondary background color if needed */
   border-radius: var(--border-radius); /* Optional border radius */
@@ -965,7 +966,7 @@ img {
   align-items: center;
   text-decoration: none;
   color: var(--first-color); /* Primary color for links */
-  font-size: var(--normal-font-size); /* Adjust font size as needed */
+  font-size: var(--normal-font-size); 
   margin-top: var(--mb-1); /* Spacing after the description */
 }
 
@@ -993,17 +994,9 @@ img {
   font-size: 0.8em; /* smaller text */
 }
 
-/* .publication__resource-links i {
-  font-size: 1em; 
+.publication__resource-links i {
+  font-size: 1em; /* smaller icons to match */
   margin-right: 0.5em;
-} */
-
-.publication__resource-links {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 0.5em; /* Reduced padding-top to bring links closer to the text */
-  margin-bottom: 1em; /* Add bottom margin for space before the next publication */
-  /* other styles remain unchanged */
 }
 
 .publication__link-text {
