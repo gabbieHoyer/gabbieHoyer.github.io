@@ -952,7 +952,8 @@ img {
 
 /* Style the publication descriptions */
 .publication__description {
-  margin-bottom: var(--mb-1); /* Adjust as needed */
+  /* margin-bottom: var(--mb-1);  */
+  margin-bottom: 0.5em;
   padding: var(--padding); /* Adjust padding as needed */
   background-color: var(--second-background-color); /* Secondary background color if needed */
   border-radius: var(--border-radius); /* Optional border radius */
@@ -973,93 +974,42 @@ img {
   margin-right: var(--mb-0-25); /* Adjust icon spacing as needed */
 }
 
-.publication__data .link-text {
+/* .publication__data .link-text {
+  display: inline-block;
+  vertical-align: middle;
+} */
+
+
+
+.publication__resource-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em; /* or other spacing to suit your design */
+}
+
+.publication__resource-links a {
+  text-decoration: none;
+  color: var(--first-color-second); /* a less prominent color */
+  font-size: 0.8em; /* smaller text */
+}
+
+/* .publication__resource-links i {
+  font-size: 1em; 
+  margin-right: 0.5em;
+} */
+
+.publication__resource-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 0.5em; /* Reduced padding-top to bring links closer to the text */
+  margin-bottom: 1em; /* Add bottom margin for space before the next publication */
+  /* other styles remain unchanged */
+}
+
+.publication__link-text {
   display: inline-block;
   vertical-align: middle;
 }
-
-
-/* .publication__data {
-  display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1.5rem;
-} */
-/* 
-.publication__title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-}
-
-.publication__subtitle {
-  display: inline-block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
-} */
-
-/* .publication__data {
-  display: block; 
-}
-
-.publication__modal-publication {
-  margin-bottom: 1rem; 
-}
-
-.publication__description {
-  margin-bottom: var(--mb-1); 
-} */
-
-/* 
-.publication__modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  z-index: var(--z-modal);
-  opacity: 0;
-  visibility: hidden;
-  transition: .3s;
-}
-
-.publication__modal-content {
-  position: relative;
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: .5rem;
-}
-
-.publication__modal-publication {
-  row-gap: 1rem;
-}
-
-.publication__modal-publication {
-  display: flex;
-}
-
-.publication__modal-title {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1-5);
-}
-
-.publication__modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
-  cursor: pointer;
-}
-
-.publication__modal-icon {
-  color: var(--first-color);
-  margin-right: var(--mb-0-25);
-} */
 
 /* PUBLICATION END */
 
