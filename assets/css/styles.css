@@ -948,6 +948,7 @@ img {
   font-size: var(--h3-font-size); 
   font-weight: var(--font-semi-bold); /* Adjust weight as needed */
   color: var(--title-color); /* Your color for titles */
+  padding-top: 1em; 
 }
 
 /* Style the subtitles in the publication section */
@@ -986,7 +987,7 @@ img {
 .publication__resource-links {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 1em; /* or other spacing to suit your design */
+  /* padding-top: 1em;  */
 }
 
 .publication__resource-links a {
