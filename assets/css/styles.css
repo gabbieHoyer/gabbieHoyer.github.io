@@ -933,7 +933,14 @@ img {
 .publication__container {
   background-color: var(--container-color); /* Your preferred background color */
   color: var(--text-color); /* Your preferred text color */
+
 }
+/* .publication__container {
+  max-width: 1200px; 
+  margin: auto; 
+  padding: 0 20px; 
+} */
+
 
 /* Style the titles in the publication section */
 .publication__title {
@@ -958,6 +965,7 @@ img {
   padding: var(--padding); /* Adjust padding as needed */
   background-color: var(--second-background-color); /* Secondary background color if needed */
   border-radius: var(--border-radius); /* Optional border radius */
+  text-align: justify; /* Justify text alignment */
 }
 
 /* Apply resource links style to the publication links */
