@@ -966,7 +966,7 @@ img {
   align-items: center;
   text-decoration: none;
   color: var(--first-color); /* Primary color for links */
-  font-size: var(--normal-font-size); 
+  font-size: var(--small-font-size); /* was normal-font-size
   margin-top: var(--mb-1); /* Spacing after the description */
 }
 
@@ -974,13 +974,6 @@ img {
   font-size: 1em;
   margin-right: var(--mb-0-25); /* Adjust icon spacing as needed */
 }
-
-/* .publication__data .link-text {
-  display: inline-block;
-  vertical-align: middle;
-} */
-
-
 
 .publication__resource-links {
   display: flex;
@@ -1264,8 +1257,11 @@ scrollup {
     grid-template-columns: max-content;
     justify-content: center;
   } */
-  .publication__content {
+  /* .publication__content {
     padding-right: 3.5rem;
+  } */
+  .publication__content {
+    padding-right: 0.5rem;
   }
   /* ------------ */
 
