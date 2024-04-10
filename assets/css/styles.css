@@ -912,9 +912,15 @@ img {
   color: var(--first-color);
 }
 
-.publication__icon {
+/* .publication__icon {
   font-size: 1.8rem;
   margin-right: var(--mb-0-25);
+} */
+
+.publication__data .services__modal-icon {
+  font-size: 1.25em; /* Adjust the size to match the title */
+  vertical-align: middle; /* Aligns the icon with the middle of the text */
+  /* You may need to adjust margin-right if the spacing needs to be different */
 }
 
 .publication [data-content] {
@@ -935,11 +941,12 @@ img {
   color: var(--text-color); /* Your preferred text color */
 }
 
-/* Style the titles in the publication section */
 .publication__title {
-  font-size: var(--h2-font-size); /* Match the size to your section titles */
-  font-weight: var(--font-semi-bold); /* Adjust weight as needed */
-  color: var(--title-color); /* Your color for titles */
+  font-size: var(--smaller-font-size); /* Smaller than your current setting */
+}
+
+.publication__icon {
+  vertical-align: middle; /* Aligns the icon vertically with the text */
 }
 
 /* Style the subtitles in the publication section */
@@ -950,32 +957,52 @@ img {
   margin-bottom: var(--mb-0-5); /* Adjust margin as needed */
 }
 
-/* Style the publication descriptions */
-.publication__description {
-  margin-bottom: var(--mb-1); /* Adjust as needed */
-  padding: var(--padding); /* Adjust padding as needed */
-  background-color: var(--second-background-color); /* Secondary background color if needed */
-  border-radius: var(--border-radius); /* Optional border radius */
-}
+/* Style the titles in the publication section */
+/* .publication__title {
+  font-size: var(--h2-font-size); 
+  font-weight: var(--font-semi-bold); 
+  color: var(--title-color); 
+} */
 
 /* Apply resource links style to the publication links */
-.publication__data a {
+/* .publication__data a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--first-color); /* Primary color for links */
-  font-size: var(--normal-font-size); /* Adjust font size as needed */
-  margin-top: var(--mb-1); /* Spacing after the description */
-}
+  color: var(--first-color); 
+  font-size: var(--small-font-size);
+  margin-top: var(--mb-1); 
+} */
 
-.publication__data a i {
+/* .publication__data a i {
   font-size: 1em;
-  margin-right: var(--mb-0-25); /* Adjust icon spacing as needed */
+  margin-right: var(--mb-0-25); 
+} */
+
+.publication__data {
+  display: flex;
+  align-items: center; /* This ensures the bullet point aligns with the title */
+  gap: 10px; /* Adjust the gap between the bullet point and the title */
 }
 
 .publication__data .link-text {
   display: inline-block;
   vertical-align: middle;
+}
+
+
+/* Style the publication descriptions
+.publication__description {
+  margin-bottom: var(--mb-1); 
+  padding: var(--padding); 
+  background-color: var(--second-background-color); 
+  border-radius: var(--border-radius); 
+} */
+
+.publication__description {
+  text-align: left; /* Aligns the text to the left */
+  max-width: 100%; /* Adjust the width as needed */
+  margin-left: 40px; /* This will offset the text from the bullet point; adjust as needed */
 }
 
 
