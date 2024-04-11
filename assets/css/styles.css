@@ -1465,29 +1465,52 @@ scrollup {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
-  .header,
+  /* .header,
   .main,
   .footer__container {
     padding: 0;
   }
-
-  /* .header,
-  .main {
-    padding: 0;
-  } */
-
-  /* .footer__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  } */
-
-  /* Make sure .footer__socials is set to align the items as you wish, 
-     for example, to center the icons in their grid cell: */
   .footer__socials {
     display: flex;
-    justify-content: center; /* This centers the social icons in their cell */
-    align-items: center; /* This centers the social icons vertically */
+    justify-content: center; 
+    align-items: center; 
+  } */
+
+  .header,
+  .main{
+    padding: 0;
   }
+  
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Split into three columns with the middle one being larger */
+    grid-template-rows: auto auto; /* Two rows */
+  }
+
+  .footer__title, .footer__subtitle {
+    /* Position the title and subtitle in the first column, spanning two rows */
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    justify-self: start;
+    align-self: start;
+  }
+
+  .footer__links {
+    /* Position the links in the second column, first row */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: start;
+  }
+
+  .footer__socials {
+    /* Position the socials in the second column, second row */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: start;
+    align-self: start;
+  }
+
 
 
   .home__blob {
