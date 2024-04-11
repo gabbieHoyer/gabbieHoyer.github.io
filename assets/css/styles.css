@@ -418,7 +418,7 @@ img {
 /*==================== ABOUT ====================*/
 
 .about__img {
-  width: 50%; /* Adjust the percentage as needed */
+  width: 50%; 
   max-width: 300px; /* The max-width you want for larger screens */
   border-radius: .5rem;
   justify-self: center;
@@ -931,42 +931,36 @@ img {
 
 /* Set the background and text color for the publication section */
 .publication__container {
-  background-color: var(--container-color); /* Your preferred background color */
-  color: var(--text-color); /* Your preferred text color */
+  background-color: var(--container-color); 
+  color: var(--text-color); 
 
 }
-/* .publication__container {
-  max-width: 1200px; 
-  margin: auto; 
-  padding: 0 20px; 
-} */
-
 
 /* Style the titles in the publication section */
 .publication__title {
   font-size: var(--small-font-size) ;
   font-size: var(--h3-font-size); 
-  font-weight: var(--font-semi-bold); /* Adjust weight as needed */
-  color: var(--title-color); /* Your color for titles */
+  font-weight: var(--font-semi-bold); 
+  color: var(--title-color);
   padding-top: 1em; 
 }
 
 /* Style the subtitles in the publication section */
 .publication__subtitle {
-  display: block; /* change to block to give it its own line if needed */
+  display: block; 
   font-size: var(--small-font-size);
-  color: var(--subtitle-color); /* Your color for subtitles */
-  margin-bottom: var(--mb-0-5); /* Adjust margin as needed */
+  color: var(--subtitle-color); 
+  margin-bottom: var(--mb-0-5); 
 }
 
 /* Style the publication descriptions */
 .publication__description {
   /* margin-bottom: var(--mb-1);  */
   margin-bottom: 0.2em;
-  padding: var(--padding); /* Adjust padding as needed */
-  background-color: var(--second-background-color); /* Secondary background color if needed */
-  border-radius: var(--border-radius); /* Optional border radius */
-  text-align: justify; /* Justify text alignment */
+  padding: var(--padding); 
+  background-color: var(--second-background-color); 
+  border-radius: var(--border-radius);
+  text-align: justify; 
 }
 
 /* Apply resource links style to the publication links */
@@ -974,7 +968,7 @@ img {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--first-color); /* Primary color for links */
+  color: var(--first-color); 
   font-size: var(--small-font-size); /* was normal-font-size
   margin-top: var(--mb-1); /* Spacing after the description */
 }
@@ -992,7 +986,7 @@ img {
 
 .publication__resource-links a {
   text-decoration: none;
-  color: var(--first-color-second); /* a less prominent color */
+  color: var(--first-color-second); 
   font-size: 0.8em; /* smaller text */
 }
 
@@ -1009,32 +1003,32 @@ img {
 /* PUBLICATION END */
 
 
-/*==================== PROJECT IN MIND ====================*/
-.project {
+/*==================== COLLABORATION IN MIND ====================*/
+.colab {
   text-align: center;
 }
 
-.project__bg {
+.colab__bg {
   background-color: var(--first-color-second);
   padding-top: 3rem;
   /* padding-bottom: 3rem;  */
 
 }
 
-.project__title {
+.colab__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-75);
 }
 
-.project__description {
+.colab__description {
   margin-bottom: var(--mb-1-5);
 }
 
-.project__title, .project__description {
+.colab__title, .colab__description {
   color: #FFF;
 }
 
-.project__img {
+.colab__img {
   width: 232px;
   justify-self: center;
 }
@@ -1274,7 +1268,7 @@ scrollup {
   }
   /* ------------ */
 
-  .project__img {
+  .colab__img {
     width: 200px;
   }
   .testimonial__data, .testimonial__header {
@@ -1305,7 +1299,7 @@ scrollup {
   .about__container,
   .skills__container,
   .portfolio__content,
-  .project__container,
+  .colab__container,
   .publication__container,
   .contact__container,
   .footer__container {
@@ -1440,21 +1434,20 @@ scrollup {
   }
 
 
-  /*  note - different project - projects in mind */
-  .project {
+  .colab {
     text-align: initial;
   }
-  .project__bg {
+  .colab__bg {
     background: none;
   }
-  .project__container {
+  .colab__container {
     background-color: var(--first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
     grid-template-columns: 1fr max-content;
     column-gap: 3rem;
   }
-  .project__data {
+  .colab__data {
     padding-top: .8rem;
   }
 
@@ -1514,7 +1507,7 @@ scrollup {
     margin-bottom: 4rem;
   }
 
-  .project__container {
+  .colab__container {
     background-color: var(--first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem 3rem; /* Adjust the last value to add padding-bottom */
