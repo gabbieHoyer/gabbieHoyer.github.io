@@ -1256,13 +1256,6 @@ scrollup {
   .publication__data {
     gap: .5rem;
   }
-  /* .publication__container {
-    grid-template-columns: max-content;
-    justify-content: center;
-  } */
-  /* .publication__content {
-    padding-right: 3.5rem;
-  } */
   .publication__content {
     padding-right: 0.5rem;
   }
@@ -1451,6 +1444,7 @@ scrollup {
     padding-top: .8rem;
   }
 
+
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1461,17 +1455,9 @@ scrollup {
     flex-direction: row;
     column-gap: 2rem;
   }
-
-  /* the original with "s" */
   .footer__socials {
     justify-self: flex-end;
   }
-
-  /* testing to see if real or mistake */
-  /* .footer__social {
-    justify-self: flex-end;
-  } */
-
   .footer__copy {
     margin-top: 4.5rem;
   }
@@ -1484,6 +1470,26 @@ scrollup {
   .footer__container {
     padding: 0;
   }
+
+  /* .header,
+  .main {
+    padding: 0;
+  } */
+
+  /* .footer__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  } */
+
+  /* Make sure .footer__socials is set to align the items as you wish, 
+     for example, to center the icons in their grid cell: */
+  .footer__socials {
+    display: flex;
+    justify-content: center; /* This centers the social icons in their cell */
+    align-items: center; /* This centers the social icons vertically */
+  }
+
+
   .home__blob {
     width: 320px;
   }
@@ -1528,10 +1534,6 @@ scrollup {
   }
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer__socials {
-    justify-self: flex-end;
   }
 
 }
