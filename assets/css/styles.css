@@ -1454,10 +1454,18 @@ scrollup {
   .footer__links {
     flex-direction: row;
     column-gap: 2rem;
+    justify-self: center;
   }
   .footer__socials {
-    justify-self: flex-end;
+    grid-column: 2; /* Social icons in the second column */
+    /* grid-row: 2;  */
+    justify-self: center; /* Align socials to the start of the second column */
   }
+  /*   
+  .footer__socials {
+    justify-self: flex-end;
+  } */
+
   .footer__copy {
     margin-top: 4.5rem;
   }
@@ -1465,17 +1473,6 @@ scrollup {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
-  /* .header,
-  .main,
-  .footer__container {
-    padding: 0;
-  }
-  .footer__socials {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-  } */
-
   .header,
   .main{
     padding: 0;
@@ -1483,30 +1480,35 @@ scrollup {
   
   .footer__container {
     display: grid;
-    /* Define the grid to have 4 columns. The size of each 'fr' can be adjusted as needed. */
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr; /* Example ratio, can be fine-tuned */
-    align-items: start;
+    grid-template-columns: 1fr 5fr 5fr; /* Allocate only the needed space for the first column */
   }
 
-  .footer__title, .footer__subtitle {
-    /* Position the title to start from the first column */
-    grid-column: 1 / 2;
-    align-self: center; /* Center the title vertically within the grid area */
+  .footer__title{
+    grid-column: 0; 
+    grid-row: 1;
+    padding-right: 0rem; 
+    justify-self: right;
+    
   }
-
-  .footer__links, .footer__socials {
-    /* Center the links and socials within the second and third columns */
-    grid-column: 2 / 4;
+  .footer__subtitle {
+    grid-column: 1; 
+    padding-right: 0rem; 
+    justify-self: right;
+    
   }
 
   .footer__links {
-    /* Position the links in the first row */
-    grid-row: 1;
+    grid-column: 2; /* Links in the second column */
+    grid-row: 2;
+    justify-self: center; /* Align links to the start of the second column */
+    padding-left: 0rem;
   }
 
   .footer__socials {
-    /* Position the socials in the second row, aligned below the links */
-    grid-row: 2;
+    grid-column: 2; /* Social icons in the second column */
+    grid-row: 3; /* New row for social icons under the links */
+    justify-self: center; /* Align socials to the start of the second column */
+    padding-right: 0rem;
   }
 
 
