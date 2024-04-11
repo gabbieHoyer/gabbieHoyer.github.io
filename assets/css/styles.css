@@ -999,9 +999,7 @@ img {
   display: inline-block;
   vertical-align: middle;
 }
-
 /* PUBLICATION END */
-
 
 /*==================== COLLABORATION IN MIND ====================*/
 .colab {
@@ -1012,7 +1010,6 @@ img {
   background-color: var(--first-color-second);
   padding-top: 3rem;
   /* padding-bottom: 3rem;  */
-
 }
 
 .colab__title {
@@ -1022,6 +1019,7 @@ img {
 
 .colab__description {
   margin-bottom: var(--mb-1-5);
+  text-align: justify;
 }
 
 .colab__title, .colab__description {
