@@ -917,11 +917,11 @@ img {
   margin-right: var(--mb-0-25);
 }
 
-.publication [data-content] {
+.publication [data-pub-content] {
   display: none;
 }
 
-.publication__active[data-content] {
+.publication__active[data-pub-content] {
   display: block;
 }
 
