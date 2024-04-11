@@ -1190,8 +1190,10 @@ scrollup {
 
 .scrollup__icon {
   font-size: 1.5rem;
-  color: #FFF;
+  /* color: #FFF; */
+  color: var(--title-color)
 }
+
 
 /* Show scroll */
 .show-scroll {
@@ -1459,9 +1461,17 @@ scrollup {
     flex-direction: row;
     column-gap: 2rem;
   }
+
+  /* the original with "s" */
   .footer__socials {
     justify-self: flex-end;
   }
+
+  /* testing to see if real or mistake */
+  /* .footer__social {
+    justify-self: flex-end;
+  } */
+
   .footer__copy {
     margin-top: 4.5rem;
   }
@@ -1519,5 +1529,10 @@ scrollup {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .footer__socials {
+    justify-self: flex-end;
+  }
+
 }
 
