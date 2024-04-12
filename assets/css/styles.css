@@ -1105,6 +1105,13 @@ img {
 .contact__subtitle {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
+  text-align: justify;
+}
+
+.contact__required_field {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  text-align: right;
 }
 
 .contact__content {

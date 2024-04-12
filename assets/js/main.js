@@ -107,25 +107,6 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 })
 
 /*==================== Pulications TABS ====================*/
-// const tabs_pub = document.querySelectorAll('[data-pub-target]'),
-// tabContents_pub = document.querySelectorAll('[data-pub-content]')
-
-// tabs_pub.forEach(tab => {
-//     tab.addEventListener('click', () => {
-//         const target = document.querySelector(tab.dataset.target)
-        
-//         tabContents_pub.forEach(tabContent_pub => {
-//             tabContent_pub.classList.remove('publication__active')
-//         })
-//         target.classList.add('publication__active')
-        
-//         tabs_pub.forEach(tab => {
-//             tab.classList.remove('publication__active')
-//         })
-//         tab.classList.add('publication__active')
-//     })
-// })
-
 const tabs_pub = document.querySelectorAll('[data-pub-target]'),
       tabContents_pub = document.querySelectorAll('[data-pub-content]');
       
@@ -162,6 +143,52 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
         },
     }
 })
+
+/* ====================== CONTACT ME ===================*/
+
+// &entry.718175521=nammmme
+// &entry.356448002=emaillll
+// &entry.1516940592=projectttt
+// &entry.133640554=messaggge
+
+// Contact form submission handling
+document.getElementById('submit-button').addEventListener('click', function(e) {
+    e.preventDefault();  // Prevent the default anchor click behavior
+    var form = document.getElementById('gform');
+
+    // Check if form fields are valid
+    if (form.checkValidity()) {
+        var formElements = form.elements;  // Access all form elements
+        setTimeout(function() {  // Set a delay for the fade out effect
+            for (let i = 0; i < formElements.length; i++) {
+                formElements[i].style.transition = 'opacity 2s';
+                formElements[i].style.opacity = 0;
+            }
+        }, 500);
+
+        var messageDiv = document.createElement('div');  // Create a div to show the success message
+        messageDiv.textContent = 'Your submission has been processed! :D';
+        messageDiv.style.transition = 'opacity 2s';
+        messageDiv.style.opacity = 1;
+        form.insertBefore(messageDiv, form.firstChild);  // Insert the message at the top of the form
+
+        form.submit();  // Manually submit the form
+    } else {
+        // Form is not valid, show an error message
+        var errorMessageDiv = document.createElement('div');  // Create a div to show the error message
+        errorMessageDiv.textContent = 'Please fill in all required fields.';
+        errorMessageDiv.style.color = 'red';  // Make the error message stand out
+        errorMessageDiv.style.transition = 'opacity 2s';
+        errorMessageDiv.style.opacity = 1;
+        form.insertBefore(errorMessageDiv, form.firstChild);  // Insert the message at the top of the form
+
+        // Remove the error message after a while
+        setTimeout(function() {
+            errorMessageDiv.remove();
+        }, 4000);
+    }
+});
+
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')

@@ -1095,7 +1095,6 @@
                         <div class="publication__content publication__active" data-pub-content id="publication">
 
                             <!--=============== PUBLICATION 1 ===============-->
-
                             <div class="publication__data">
                                 <!-- <i class="uil uil-check-circle services__modal-icon"></i> -->
                                 <h3 class="publication__description_title">MskSAM - Foundation model for Musculoskeletal MRI Segmentation</h3>
@@ -1165,12 +1164,8 @@
                                     </a>
                                 </li>
                             </div>
-
-
-
                         </div>
                                           
-
                         <!--=============== PUBLICATION CONTENT 2 ===============-->
                         <div class="publication__content" data-pub-content id="award">
                             <!-- publication__active -->
@@ -1247,9 +1242,6 @@
             </section>
             <!----------------- Publications End --------------------->
 
-
-
-
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
                 <h2 class="section__title">Contact Me</h2>
@@ -1281,7 +1273,7 @@
                             <div>
                                 <h3 class="contact__title">Location</h3>
                                 <span class="contact__subtitle">
-                                    Department of Radiology and Biomedical Imaging, University of California, San Francisco<br>
+                                    Department of Radiology and Biomedical Imaging, UCSF<br>
                                     1700 4th St., Suite 201<br>
                                     San Francisco, CA 94158
                                 </span>
@@ -1289,35 +1281,39 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid">
+                    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf6ESNGEACG4wO3oki--77hBDzo_hSsY_J4QxU9EA1Cd_CKSw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <label for="entry.718175521" class="contact__label">Name*</label>
+                                <input type="text" name="entry.718175521" id="entry.718175521" class="contact__input" required>
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <label for="entry.356448002" class="contact__label">Email*</label>
+                                <input type="email" name="entry.356448002" id="entry.356448002" class="contact__input" required>
                             </div>
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Project</label>
-                            <input type="text" class="contact__input">
+                            <label for="entry.1516940592" class="contact__label">Project</label>
+                            <input type="text" name="entry.1516940592" id="entry.1516940592" class="contact__input">
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <label for="entry.133640554" class="contact__label">Message</label>
+                            <textarea name="entry.133640554" id="entry.133640554" cols="0" rows="7" class="contact__input"></textarea>
                         </div>
+
+                        <span class="contact__required_field">
+                            *field required
+                        </span>
                         
                         <div>
-                            <a href="#" class="button button--flex">
+                            <a href="#" class="button button--flex" id="submit-button">
                                 Send Message
                                 <i class="uil uil-message button__icon"></i>
                             </a>
                         </div>
                     </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
                 </div>
-
             </section>
 
         </main>
