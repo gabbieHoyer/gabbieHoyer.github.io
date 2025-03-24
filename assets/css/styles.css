@@ -477,14 +477,19 @@ img {
   transition: .3s;
 }
 
+.button__icon2 {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+}
+
 .button--white {
   background-color: #FFF;
   color: var(--first-color);
 }
 
-.button--white:hover {
+/* .button--white:hover {
   background-color: #FFF;
-}
+} */
 
 .button--flex {
   display: inline-flex;
@@ -504,6 +509,13 @@ img {
 .button--link:hover {
   background-color: transparent;
   color: var(--first-color-alt);
+}
+
+.button--white:hover {
+  /* background-color: transparent; */
+  background-color: #FFF;
+  color: var(--first-color-alt);
+  /* background-color: #FFF; */
 }
 
 /*==================== ABOUT ====================*/
@@ -923,6 +935,11 @@ img {
   vertical-align: middle;
 }
 
+.resource-links a:hover,
+.resource-links a:hover i,
+.resource-links a:hover .link-text {
+  color: var(--first-color-alt);
+}
 
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
@@ -1101,6 +1118,13 @@ img {
   display: inline-block;
   vertical-align: middle;
 }
+
+.publication__resource-links a:hover,
+.publication__resource-links a:hover i,
+.publication__resource-links a:hover .publication__link-text {
+  color: var(--first-color-alt);
+}
+
 /* PUBLICATION END */
 
 /*==================== COLLABORATION IN MIND ====================*/
