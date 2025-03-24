@@ -1293,6 +1293,15 @@ img {
   color: var(--first-color-lighter);
 }
 
+.footer__social svg {
+  fill: #FFF;
+  transition: fill 0.3s; /* optional smooth transition */
+}
+
+.footer__social:hover svg {
+  fill: var(--first-color-lighter);
+}
+
 .footer__copy {
   font-size: var(--smaller-font-size);
   text-align: center;
