@@ -326,9 +326,9 @@ img {
 
 /*==================== HOME ====================*/
 
-
 .home__container.container {
-  max-width: 700px !important;
+  /* max-width: 700px !important; */
+  max-width: 720px !important;
   margin: 0 auto !important;
 }
 
@@ -351,6 +351,7 @@ img {
 /* Right column: text block */
 .home__data {
   text-align: center;
+  /* text-align: justify; */
   /* Remove margin: 0 auto if you don't want to further squeeze it. 
      Let it fill the column so you don't get too much empty space. */
   /* max-width: 700px; Optional if you want to limit how wide text can get */
@@ -533,16 +534,84 @@ img {
 
 /*==================== ABOUT ====================*/
 
+/* Container styling: single-column, centered content */
+.about__container {
+  /* max-width: 768px;         */
+  max-width: 650px;  
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Diagram container (optional margin for spacing) */
+.about__diagram {
+  margin: 2rem 0;
+}
+
+/* Diagram image */
 .about__img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Text paragraphs */
+/* .about__description {
+  margin-bottom: 1.5rem;
+} */
+
+/* Bullet list */
+.about__list {
+  list-style: disc;
+  padding-left: 1.5rem; /* Creates space for the bullets */
+  margin-bottom: 2rem;
+  text-align: left;     /* Align bullet items to the left */
+  font-size: var(--small-font-size);
+}
+
+/* Info boxes (stats) */
+/* .about__info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem; 
+}
+
+.about__info-title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  display: block;
+  text-align: center;
+}
+
+.about__info-name {
+  font-size: var(--smaller-font-size);
+  display: block;
+  text-align: center;
+} */
+
+/* CV button container */
+.about__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ------------------------------------------------- */
+/* .about__img {
   width: 50%; 
-  max-width: 300px; /* The max-width you want for larger screens */
+  max-width: 300px;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
-}
+} */
 
 .about__description {
-  text-align: center;
+  /* text-align: center; */
+  text-align: justify;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -550,6 +619,8 @@ img {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2-5);
+  /* gap: 2rem;  */
+  gap: 7rem; /* Adds horizontal space between items */
 }
 
 .about__info-title {
@@ -559,6 +630,7 @@ img {
 }
 
 .about__info-name {
+  display: flex;
   font-size: var(--smaller-font-size);
 }
 
@@ -567,10 +639,10 @@ img {
   text-align: center;
 }
 
-.about__buttons {
+/* .about__buttons {
   display: flex;
   justify-content: center;
-}
+} */
 
 /*==================== SKILLS ====================*/
 .skills__container {
@@ -1555,17 +1627,20 @@ scrollup {
     margin-left: 0rem;
   }
 
-  .about__container {
+  /* .about__container {
     column-gap: 5rem;
-  }
+  } */
   .about__img {
     width: 350px;
   }
   .about__description {
-    text-align: initial;
+    /* text-align: initial; */
+    text-align: justify;
   }
   .about__info {
     justify-content: space-between;
+    /* gap: 2rem;  */
+    gap: 7rem; 
   }
   .about__buttons {
     justify-content: initial;
