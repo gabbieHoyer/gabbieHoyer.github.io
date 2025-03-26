@@ -107,12 +107,49 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 })
 
 /*==================== Pulications TABS ====================*/
+// const tabs_pub = document.querySelectorAll('[data-pub-target]'),
+//       tabContents_pub = document.querySelectorAll('[data-pub-content]');
+      
+// tabs_pub.forEach(tab => {
+//     tab.addEventListener('click', () => {
+//         const target = document.querySelector(tab.dataset.pubTarget); // Adjusted here
+        
+//         tabContents_pub.forEach(tabContent_pub => {
+//             tabContent_pub.classList.remove('publication__active');
+//         });
+//         target.classList.add('publication__active');
+        
+//         tabs_pub.forEach(tab => {
+//             tab.classList.remove('publication__active');
+//         });
+//         tab.classList.add('publication__active');
+//     });
+// });
+
 const tabs_pub = document.querySelectorAll('[data-pub-target]'),
       tabContents_pub = document.querySelectorAll('[data-pub-content]');
-      
+
+// Function to reset tab state to a default (e.g., show "Publications" tab)
+function resetPublicationTabs() {
+    // Remove active class from all tabs and contents
+    tabContents_pub.forEach(tabContent_pub => {
+        tabContent_pub.classList.remove('publication__active');
+    });
+    tabs_pub.forEach(tab => {
+        tab.classList.remove('publication__active');
+    });
+
+    // Set default tab (e.g., "#publication") as active
+    const defaultTab = document.querySelector('[data-pub-target="#publication"]');
+    const defaultContent = document.querySelector('#publication');
+    defaultTab.classList.add('publication__active');
+    defaultContent.classList.add('publication__active');
+}
+
+// Tab click handler
 tabs_pub.forEach(tab => {
     tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.pubTarget); // Adjusted here
+        const target = document.querySelector(tab.dataset.pubTarget);
         
         tabContents_pub.forEach(tabContent_pub => {
             tabContent_pub.classList.remove('publication__active');
@@ -125,6 +162,22 @@ tabs_pub.forEach(tab => {
         tab.classList.add('publication__active');
     });
 });
+
+// Handle navigation to #publication_award via URL hash or nav/footer links
+function handleHashNavigation() {
+    const hash = window.location.hash;
+    if (hash === '#publication_award') {
+        resetPublicationTabs();
+        // Ensure the scroll position is correct
+        const section = document.querySelector('#publication_award');
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Listen for hash changes (e.g., clicking nav/footer links)
+window.addEventListener('hashchange', handleHashNavigation);
+// Run on page load in case the page is loaded with #publication_award
+window.addEventListener('load', handleHashNavigation);
 
 /*==================== TESTIMONIAL ====================*/
 let swiperTestimonial = new Swiper('.testimonial__container', {
@@ -191,24 +244,43 @@ document.getElementById('submit-button').addEventListener('click', function(e) {
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+// const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
-    const scrollY = window.scrollY || window.pageYOffset
+// function scrollActive(){
+//     const scrollY = window.scrollY || window.pageYOffset
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
+//     sections.forEach(current =>{
+//         const sectionHeight = current.offsetHeight
+//         const sectionTop = current.offsetTop - 50;
+//         sectionId = current.getAttribute('id')
+
+//         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+//         }else{
+//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+//         }
+//     })
+// }
+// window.addEventListener('scroll', scrollActive)
+
+const sections = document.querySelectorAll('section[id]');
+
+function scrollActive() {
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        const sectionId = current.getAttribute('id');
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
         }
-    })
+    });
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 function scrollHeader(){
