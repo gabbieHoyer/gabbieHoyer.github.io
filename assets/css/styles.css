@@ -551,6 +551,11 @@ img {
   margin: 2rem 0;
 }
 
+.filter-green {
+  filter: invert(35%) sepia(20%) saturate(494%) hue-rotate(129deg) brightness(94%) contrast(85%);
+  transition: filter 0.3s;
+}
+
 /* Diagram image */
 .about__img {
   max-width: 100%;
