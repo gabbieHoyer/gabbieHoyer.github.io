@@ -29,6 +29,7 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills__content'),
       skillsHeader = document.querySelectorAll('.skills__header')
@@ -64,35 +65,6 @@ document.querySelectorAll('.skills__dots').forEach(dotsContainer => {
         dotsContainer.appendChild(dot);
     }
 });
-
-// document.querySelectorAll('.donut').forEach(donut => {
-//     const level = donut.getAttribute('data-level'); // level from 1 to 5
-//     donut.style.setProperty('--level', level);
-// });
-  
-// document.querySelectorAll('.donut').forEach(donut => {
-//     const level = parseInt(donut.getAttribute('data-level')); // Level from 1 to 5
-//     const totalSegments = 5; // For 5 levels: basic, intermediate, proficient, advanced, highly advanced
-//     const gap = 2; // Gap between segments in degrees
-//     const segmentAngle = (360 - totalSegments * gap) / totalSegments; // Angle per segment, accounting for gaps
-
-//     // Define colors for filled and unfilled segments
-//     const filledColor = 'var(--first-color, #4a90e2)'; // Color for filled segments
-//     const unfilledColor = 'var(--first-color-lighter, #d3e4ff)'; // Color for unfilled segments
-
-//     // Build the conic-gradient dynamically
-//     let gradientParts = [];
-//     for (let i = 0; i < totalSegments; i++) {
-//         const startAngle = i * (segmentAngle + gap);
-//         const endAngle = startAngle + segmentAngle;
-//         const color = i < level ? filledColor : unfilledColor;
-//         gradientParts.push(`${color} ${startAngle}deg ${endAngle}deg`);
-//     }
-
-//     // Join the gradient parts and apply to the donut
-//     const gradient = `conic-gradient(${gradientParts.join(', ')})`;
-//     donut.style.background = gradient;
-// });
 
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
@@ -153,25 +125,6 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 })
 
 /*==================== Pulications TABS ====================*/
-// const tabs_pub = document.querySelectorAll('[data-pub-target]'),
-//       tabContents_pub = document.querySelectorAll('[data-pub-content]');
-      
-// tabs_pub.forEach(tab => {
-//     tab.addEventListener('click', () => {
-//         const target = document.querySelector(tab.dataset.pubTarget); // Adjusted here
-        
-//         tabContents_pub.forEach(tabContent_pub => {
-//             tabContent_pub.classList.remove('publication__active');
-//         });
-//         target.classList.add('publication__active');
-        
-//         tabs_pub.forEach(tab => {
-//             tab.classList.remove('publication__active');
-//         });
-//         tab.classList.add('publication__active');
-//     });
-// });
-
 const tabs_pub = document.querySelectorAll('[data-pub-target]'),
       tabContents_pub = document.querySelectorAll('[data-pub-content]');
 
@@ -290,24 +243,6 @@ document.getElementById('submit-button').addEventListener('click', function(e) {
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-// const sections = document.querySelectorAll('section[id]')
-
-// function scrollActive(){
-//     const scrollY = window.scrollY || window.pageYOffset
-
-//     sections.forEach(current =>{
-//         const sectionHeight = current.offsetHeight
-//         const sectionTop = current.offsetTop - 50;
-//         sectionId = current.getAttribute('id')
-
-//         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-//         }else{
-//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-//         }
-//     })
-// }
-// window.addEventListener('scroll', scrollActive)
 
 const sections = document.querySelectorAll('section[id]');
 
