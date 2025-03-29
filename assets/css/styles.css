@@ -698,7 +698,221 @@ img {
 .skills__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  line-height: 1;
 }
+
+
+.skills__close .skills__list {
+  height: 0px;
+  overflow: hidden;
+}
+
+.skills__open .skills__list {
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
+
+.skills__open .skills__arrow {
+  transform: rotate(-180deg);
+}
+
+/* ==================SKILLS DOTS STYLE=================== */
+
+.skills__dots {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.skills__dots .dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: var(--first-color-lighter);
+  display: inline-block;
+}
+
+.skills__dots .dot.filled {
+  background-color: var(--first-color);
+}
+
+.skills__dots .dot.empty {
+  background-color: var(--first-color-lighter);
+}
+
+.skills__dots:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: var(--smaller-font-size);
+  white-space: nowrap;
+}
+
+/* ==================SKILLS LEGEND =================== */
+
+/* .skills__legend {
+  margin-bottom: var(--mb-2-5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.skills__legend-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.skills__legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skills__legend-item {
+  font-size: var(--normal-font-size);
+} */
+
+/*==================== SKILLS ====================*/
+.skills__container {
+  row-gap: 0;
+}
+
+.skills__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+.skills__icon, .skills__arrow {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.skills__icon {
+  margin-right: var(--mb-0-75);
+}
+
+.skills__title {
+  font-size: var(--h3-font-size);
+}
+
+.skills__subtitle {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.skills__arrow {
+  margin-left: auto;
+  transition: .4s;
+}
+
+.skills__list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 1;
+}
+
+.skills__close .skills__list {
+  height: 0px;
+  overflow: hidden;
+}
+
+.skills__open .skills__list {
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
+
+.skills__open .skills__arrow {
+  transform: rotate(-180deg);
+}
+
+/* ==================SKILLS DOTS STYLE=================== */
+.skills__dots {
+  display: flex;
+  gap: 0.3rem;
+  position: relative; /* For tooltip positioning */
+}
+
+.skills__dots .dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: var(--first-color-lighter);
+  display: inline-block;
+}
+
+.skills__dots .dot.filled {
+  background-color: var(--first-color);
+}
+
+.skills__dots .dot.empty {
+  background-color: var(--first-color-lighter);
+}
+
+.skills__dots:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: var(--smaller-font-size);
+  white-space: nowrap;
+}
+
+/* ==================SKILLS LEGEND=================== */
+.skills__legend {
+  margin-bottom: var(--mb-2-5);
+  padding: 1rem;
+  /* background-color: #f9f9f9; */ /* Commented out as per your code */
+  border-radius: 0.5rem;
+  text-align: center; /* Center the legend content */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+.skills__legend-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.skills__legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center; /* Center the legend items horizontally */
+}
+
+.skills__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--normal-font-size);
+}
+
+.skills__legend-item .skills__dots {
+  display: flex;
+  gap: 0.3rem;
+}
+/* ====================== SKILLS LIST ======================= */
 
 .skills__bar, .skills__percentage {
   height: 5px;
@@ -814,19 +1028,98 @@ img {
   width: 80%;
 }
 
-.skills__close .skills__list {
-  height: 0px;
-  overflow: hidden;
+/* ==================SKILLS PYRAMID STYLE=================== */
+/* 
+.skills__pyramid {
+  display: flex;
+  flex-direction:column;
+  gap: 4px;
+  margin-top: 6px;
+  width: 100%;
+  max-width: 150px;
+  justify-content:center;
 }
 
-.skills__open .skills__list {
-  height: max-content;
-  margin-bottom: var(--mb-2-5);
+.skills__pyramid .bar {
+  height: 6px;
+  border-radius: 3px;
 }
 
-.skills__open .skills__arrow {
-  transform: rotate(-180deg);
+.skills__pyramid .bar:nth-child(5){width:100%;}
+.skills__pyramid .bar:nth-child(4){width:80%;}
+.skills__pyramid .bar:nth-child(3){width:60%;}
+.skills__pyramid .bar:nth-child(2){width:40%;}
+.skills__pyramid .bar:nth-child(1){width:20%;}
+
+.skills__pyramid .filled {
+  background-color: var(--first-color);
 }
+
+.skills__pyramid .empty {
+  background-color: var(--first-color-lighter);
+} */
+
+/* ==================SKILLS DONUT STYLE=================== */
+/* 
+.skills__data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skills__name {
+  font-size: 0.9rem;
+}
+
+.donut {
+  width: 40px;
+  height: 40px;
+  background: conic-gradient(var(--first-color) calc(var(--level) * 72deg), var(--first-color-lighter) 0deg);
+  border-radius: 50%;
+  position: relative;
+}
+
+.donut::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background: #fff; 
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* .skills__data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+} */
+
+/* .skills__name {
+  font-size: 0.9rem;
+} */
+/* 
+.donut {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 50%;
+  background: transparent;
+}
+.donut::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
 
 /*==================== QUALIFICATION ====================*/
 .qualification__tabs {

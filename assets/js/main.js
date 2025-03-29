@@ -48,6 +48,52 @@ skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
 
+document.querySelectorAll('.skills__dots').forEach(dotsContainer => {
+    const level = parseInt(dotsContainer.getAttribute('data-level')); // Get the level (e.g., 3)
+    const totalDots = 5; // Total number of dots (for 5 levels)
+
+    // Clear any existing dots (in case the script runs multiple times)
+    dotsContainer.innerHTML = '';
+
+    // Generate the dots
+    for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        // If the current dot index is less than the level, mark it as filled; otherwise, empty
+        dot.classList.add(i < level ? 'filled' : 'empty');
+        dotsContainer.appendChild(dot);
+    }
+});
+
+// document.querySelectorAll('.donut').forEach(donut => {
+//     const level = donut.getAttribute('data-level'); // level from 1 to 5
+//     donut.style.setProperty('--level', level);
+// });
+  
+// document.querySelectorAll('.donut').forEach(donut => {
+//     const level = parseInt(donut.getAttribute('data-level')); // Level from 1 to 5
+//     const totalSegments = 5; // For 5 levels: basic, intermediate, proficient, advanced, highly advanced
+//     const gap = 2; // Gap between segments in degrees
+//     const segmentAngle = (360 - totalSegments * gap) / totalSegments; // Angle per segment, accounting for gaps
+
+//     // Define colors for filled and unfilled segments
+//     const filledColor = 'var(--first-color, #4a90e2)'; // Color for filled segments
+//     const unfilledColor = 'var(--first-color-lighter, #d3e4ff)'; // Color for unfilled segments
+
+//     // Build the conic-gradient dynamically
+//     let gradientParts = [];
+//     for (let i = 0; i < totalSegments; i++) {
+//         const startAngle = i * (segmentAngle + gap);
+//         const endAngle = startAngle + segmentAngle;
+//         const color = i < level ? filledColor : unfilledColor;
+//         gradientParts.push(`${color} ${startAngle}deg ${endAngle}deg`);
+//     }
+
+//     // Join the gradient parts and apply to the donut
+//     const gradient = `conic-gradient(${gradientParts.join(', ')})`;
+//     donut.style.background = gradient;
+// });
+
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
 tabContents = document.querySelectorAll('[data-content]')
