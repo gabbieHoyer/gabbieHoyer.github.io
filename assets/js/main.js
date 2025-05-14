@@ -109,6 +109,23 @@ modalCloses.forEach((modalClose) => {
     })
 })
 
+
+/*================= LINK SERVICES MODAL - NEW =================*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+
+    if (hash) {
+        const modalName = hash.replace('#', '');
+        const modalTrigger = document.querySelector(`[data-modal-name="${modalName}"]`);
+
+        if (modalTrigger) {
+            modalTrigger.click(); // Triggers the correct modal by simulating a user click
+        }
+    }
+});
+
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
