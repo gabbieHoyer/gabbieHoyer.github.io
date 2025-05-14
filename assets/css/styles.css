@@ -793,6 +793,10 @@ img {
   overflow: hidden;
 }
 
+.services__content, .services__container {
+    pointer-events: auto;
+}
+
 .services__content:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -811,8 +815,12 @@ img {
 }
 
 .services__button {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1.5rem;
   cursor: pointer;
   font-size: var(--small-font-size);
+  pointer-events: auto; /* Ensure pointer events are enabled */
 }
 
 .services__button:hover .button__icon {

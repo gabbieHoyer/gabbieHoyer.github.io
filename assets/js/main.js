@@ -87,45 +87,80 @@ tabs.forEach(tab => {
 })
 
 /*==================== SERVICES MODAL ====================*/
+// const modalViews = document.querySelectorAll('.services__modal'),
+//       modalBtns = document.querySelectorAll('.services__button'),
+//       modalCloses = document.querySelectorAll('.services__modal-close')
+
+// let modal = function(modalClick){
+//     modalViews[modalClick].classList.add('active-modal')
+// }
+
+// modalBtns.forEach((modalBtn, i) => {
+//     modalBtn.addEventListener('click', () => {
+//         modal(i)
+//     })
+// })
+
+// modalCloses.forEach((modalClose) => {
+//     modalClose.addEventListener('click', () => {
+//         modalViews.forEach((modalView) => {
+//             modalView.classList.remove('active-modal')
+//         })
+//     })
+// })
+
+
+/*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
-      modalCloses = document.querySelectorAll('.services__modal-close')
+      modalCloses = document.querySelectorAll('.services__modal-close');
 
-let modal = function(modalClick){
-    modalViews[modalClick].classList.add('active-modal')
-}
+let modal = function(modalIndex) {
+    modalViews[modalIndex].classList.add('active-modal');
+};
 
+// Bind click-to-open logic (restored and debugged)
 modalBtns.forEach((modalBtn, i) => {
     modalBtn.addEventListener('click', () => {
-        modal(i)
-    })
-})
+        console.log(`Button clicked: ${modalBtn.dataset.modalName}, index: ${i}`);
+        modal(i); // Open the modal
+    });
+});
 
+// Bind close-all logic
 modalCloses.forEach((modalClose) => {
     modalClose.addEventListener('click', () => {
         modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
+            modalView.classList.remove('active-modal');
+        });
+    });
+});
 
-
-/*================= LINK SERVICES MODAL BY HASH =================*/
-
+/*================= OPEN MODAL ON HASH =================*/
 document.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash;
-
     if (hash) {
         const modalName = hash.replace('#', '');
+        const targetModal = document.getElementById(modalName);
+        const targetButton = document.querySelector(`.services__button[data-modal-name="${modalName}"]`);
 
-        // Find button with matching data-modal-name
-        modalBtns.forEach((modalBtn, i) => {
-            if (modalBtn.dataset.modalName === modalName) {
-                modal(i); // call same modal-opening function
+        if (targetModal && targetButton) {
+            console.log(`Opening modal via hash: ${modalName}`);
+            const modalIndex = Array.from(modalViews).findIndex(modal => modal.id === modalName);
+            if (modalIndex !== -1) {
+                targetButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                modal(modalIndex);
+            } else {
+                console.warn(`Modal with id ${modalName} not found in modalViews`);
             }
-        });
+        } else {
+            console.warn(`No matching button or modal found for hash: ${modalName}`);
+        }
+    } else {
+        console.log('No hash found in URL');
     }
 });
+
 
 
 /*==================== PORTFOLIO SWIPER  ====================*/
