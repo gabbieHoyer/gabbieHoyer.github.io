@@ -110,18 +110,20 @@ modalCloses.forEach((modalClose) => {
 })
 
 
-/*================= LINK SERVICES MODAL - NEW =================*/
+/*================= LINK SERVICES MODAL BY HASH =================*/
 
 document.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash;
 
     if (hash) {
         const modalName = hash.replace('#', '');
-        const modalTrigger = document.querySelector(`[data-modal-name="${modalName}"]`);
 
-        if (modalTrigger) {
-            modalTrigger.click(); // Triggers the correct modal by simulating a user click
-        }
+        // Find button with matching data-modal-name
+        modalBtns.forEach((modalBtn, i) => {
+            if (modalBtn.dataset.modalName === modalName) {
+                modal(i); // call same modal-opening function
+            }
+        });
     }
 });
 
