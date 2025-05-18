@@ -861,6 +861,7 @@ img {
   overflow-y: auto; /* Enable vertical scrolling for the list */
   padding-right: 0.5rem; /* Add padding to prevent content from touching the scrollbar */
   row-gap: 1rem;
+  margin-top: 0.5rem;  /* new*/
 }
 
 .services__modal-service {
@@ -886,6 +887,26 @@ img {
 .services__modal-icon {
   color: var(--first-color);
   margin-right: var(--mb-0-25);
+}
+
+
+/* new*/
+/* Container for the diagram in the medical data modal */
+.modal-diagram-medical {
+    margin: 1.5rem auto; /* Adjust margin for spacing */
+    margin-bottom: 0.2rem;
+    width: 100%; /* Ensure it scales responsively */
+    max-width: 400px; /* Reduce the maximum width to make the diagram smaller */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* new*/
+/* Apply the green filter to the image inside the diagram container */
+.modal-diagram-medical img {
+    filter: invert(35%) sepia(20%) saturate(494%) hue-rotate(129deg) brightness(94%) contrast(85%);
+    transition: filter 0.3s;
+    width: 100%; /* Ensure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Optional: Style the scrollbar for better aesthetics (Webkit browsers like Chrome/Safari) */
@@ -1411,6 +1432,16 @@ scrollup {
     padding: 0 .5rem;
   }
 
+
+  .modal-diagram-medical {
+    margin: 0.5rem auto; /* Adjust margin for spacing */
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    width: 100%; /* Ensure it scales responsively */
+    max-width: 100px; /* Reduce the maximum width to make the diagram smaller */
+    height: auto; /* Maintain aspect ratio */
+}
+
   /* ------------ */
   .publication__data {
     gap: .5rem;
@@ -1466,6 +1497,7 @@ scrollup {
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
   }
+
 
   .qualification__sections {
     display: grid;
