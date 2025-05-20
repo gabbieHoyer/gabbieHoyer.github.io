@@ -909,6 +909,22 @@ img {
     height: auto; /* Maintain aspect ratio */
 }
 
+.modal-diagram-twin {
+    margin: 1.0rem auto; /* Adjust margin for spacing */
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    width: 100%; /* Ensure it scales responsively */
+    max-width: 150px; /* Reduce the maximum width to make the diagram smaller */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.modal-diagram-twin img {
+    filter: invert(35%) sepia(20%) saturate(494%) hue-rotate(129deg) brightness(94%) contrast(85%);
+    transition: filter 0.3s;
+    width: 100%; /* Ensure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Optional: Style the scrollbar for better aesthetics (Webkit browsers like Chrome/Safari) */
 .services__modal-services::-webkit-scrollbar {
   width: 8px;
@@ -1367,13 +1383,17 @@ scrollup {
   transition: .4s;
 }
 
-.scrollup:hover {
-  background-color: var(--first-color-alt);
-}
+
 .scrollup__icon {
   font-size: 1.5rem;
   /* color: #FFF; */
   color: var(--title-color)
+}
+
+.scrollup__icon:hover {
+
+  color: var(--first-color);
+  /* transform: translateY(0.25rem); */
 }
 /* Show scroll */
 .show-scroll {
