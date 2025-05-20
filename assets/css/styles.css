@@ -914,7 +914,7 @@ img {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     width: 100%; /* Ensure it scales responsively */
-    max-width: 150px; /* Reduce the maximum width to make the diagram smaller */
+    max-width: 500px; /* Reduce the maximum width to make the diagram smaller */
     height: auto; /* Maintain aspect ratio */
 }
 
