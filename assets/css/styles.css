@@ -925,6 +925,26 @@ img {
     height: auto; /* Maintain aspect ratio */
 }
 
+.modal-diagram-google {
+    margin: 1.0rem auto; /* Adjust margin for spacing */
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    width: 95%; /* Ensure it scales responsively */
+    max-width: 450px; /* Reduce the maximum width to make the diagram smaller */
+    height: auto; /* Maintain aspect ratio */
+    justify-self: center;
+    align-items: center;
+}
+
+.modal-diagram-google img {
+    /* filter: invert(35%) sepia(20%) saturate(494%) hue-rotate(129deg) brightness(94%) contrast(85%); */
+    transition: filter 0.3s;
+    width: 95%; /* Ensure the image fits the container */
+    height: auto; /* Maintain aspect ratio */
+    justify-self: center;
+    align-items: center;
+}
+
 /* Optional: Style the scrollbar for better aesthetics (Webkit browsers like Chrome/Safari) */
 .services__modal-services::-webkit-scrollbar {
   width: 8px;
@@ -1181,6 +1201,19 @@ img {
 .publication__resource-links a:hover .publication__link-text {
   color: var(--first-color-alt);
 }
+
+/* Awards: show the modal button inline instead of absolute */
+.publication__data .services__button {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .4rem;
+  font-size: var(--small-font-size);
+}
+
+
+
 
 /* PUBLICATION END */
 
