@@ -101,6 +101,10 @@
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
+
+    /* Theme-able background for the image panel */
+    --highlights-img-bg: rgba(0, 0, 0, 0.03);
+
 }
 
 /* Font size for large devices */
@@ -135,6 +139,14 @@ body.dark-theme {
 
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+
+  /* --highlights-img-bg: var(--first-color); */
+
+  --highlights-img-bg: color-mix(in srgb, var(--first-color) 30%, transparent);
+  
+  /* If var(--first-color) is too strong, try this instead:
+  --highlights-img-bg: color-mix(in srgb, var(--first-color) 18%, transparent);
+  */
 }
 
 /*========== Button Dark/Light ==========*/
@@ -396,6 +408,7 @@ img {
 }
 .home__title {
   font-size: var(--big-font-size);
+  padding-bottom: 1rem;
 }
 
 .home__subtitle {
@@ -406,7 +419,10 @@ img {
 }
 
 .home__description {
+  font-size: var(--normal-font-size);
   margin-bottom: var(--mb-2);
+  /* text-align: justify; */
+  
 }
 
 
@@ -445,8 +461,21 @@ img {
   align-items: center;
 }
 
+.button--justify {
+  display: inline-flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  padding-right: 1em;
+}
+
 .button--small {
   padding: .75rem 1rem;
+}
+
+.button--tiny {
+  padding: .25rem .5rem;
+  /* margin-right: var(--mb-0-25); */
+  font-size: var(--smaller-font-size);
 }
 
 .button--link {
@@ -479,6 +508,7 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: 3rem;
 }
 
 /* Diagram container (optional margin for spacing) */
@@ -504,13 +534,14 @@ img {
   padding-left: 1.5rem; /* Creates space for the bullets */
   margin-bottom: 2rem;
   text-align: left;     /* Align bullet items to the left */
-  font-size: var(--small-font-size);
+  /* font-size: var(--small-font-size); */
 }
 
 /* CV button container */
 .about__buttons {
   display: flex;
   justify-content: center;
+
 }
 .about__description {
   /* text-align: center; */
@@ -554,6 +585,7 @@ img {
   row-gap: 0.3rem; 
   /* column-gap: 1.5rem;  */
   column-gap: 1.7rem; 
+  /* padding-bottom: 1rem; */
 }
 
 .skills__content {
@@ -704,6 +736,10 @@ img {
 }
 
 /*==================== QUALIFICATION ====================*/
+.qualification__container {
+  padding-bottom: 3rem;
+}
+
 .qualification__tabs {
   display: flex;
   justify-content: space-evenly;
@@ -781,6 +817,7 @@ img {
 .services__container {
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 3rem;
 }
 
 .services__content {
@@ -888,7 +925,6 @@ img {
   color: var(--first-color);
   margin-right: var(--mb-0-25);
 }
-
 
 /* new*/
 /* Container for the diagram in the medical data modal */
@@ -1063,6 +1099,8 @@ img {
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: -2.5rem;
+
+
 }
 
 .swiper-pagination-bullet-active {
@@ -1072,6 +1110,182 @@ img {
 .swiper-button-prev,
 .swiper-button-next,
 .swiper-pagination-bullet {
+  outline: none;
+}
+
+
+
+/*==================== HIGHLIGHTS Carousel PORTFOLIO ====================*/
+.highlights__container {
+  /* overflow: initial; */
+
+  position: relative;   /* anchor the absolute pagination */
+  overflow: visible;    /* you already want arrows + dots visible */
+  margin-bottom: 5.75rem; /* space AFTER the dots */
+}
+
+.highlights__content {
+  padding: 0 1.5rem;
+}
+
+.highlights__img{
+  display: block;
+  height: 220px;         /* keep your current scale */
+  width: auto;           /* key change: box fits the image */
+  max-width: 100%;       /* prevents overflow on smaller screens */
+  object-fit: contain;
+
+  margin-inline: auto;   /* centers the now-shrunk box */
+  /* If you prefer grid-native centering, you can add:
+     justify-self: center;
+  */
+
+  border-radius: 0.75rem;
+  background: var(--highlights-img-bg);
+  padding: 0.75rem;
+  /* padding: 0.70rem 0.55rem;   */
+
+  transition: background-color 0.2s ease;
+}
+
+
+.highlights__img_tall{
+  display: block;
+  height: 245px;         /* keep your current scale */
+  width: auto;           /* key change: box fits the image */
+  max-width: 100%;       /* prevents overflow on smaller screens */
+  object-fit: contain;
+
+  margin-inline: auto;   /* centers the now-shrunk box */
+  /* If you prefer grid-native centering, you can add:
+     justify-self: center;
+  */
+
+  border-radius: 0.75rem;
+  background: var(--highlights-img-bg);
+  padding: 0.75rem;
+
+  transition: background-color 0.2s ease;
+}
+
+.highlights__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+  padding-top: 0.25em; 
+  /* text-align: justify; */
+}
+
+.highlights__subtitle {
+  font-size: var(--h4-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+.highlights__venue{
+  /* display:block;
+  font-weight:600;   */
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);   
+  font-size: var(--small-font-size);
+  /* font-size: var(--h4-font-size); */
+  /* font-size: var(--normal-font-size); */
+  margin-bottom: var(--mb-0-5);
+
+  /* font-size:0.95rem;
+  letter-spacing:0.02em;
+  margin-bottom:0.35rem;
+  opacity:0.85; */
+
+}
+
+
+.highlights__description {
+  margin-bottom: var(--mb-0-75);
+  font-size: var(--small-font-size);
+  text-align: justify;
+}
+
+
+/* tighten the image-to-text spacing inside each slide */
+.h\69ghlights__content{
+  column-gap: 1.0rem;  /* tune: try 1rem, 1.25rem, 1.5rem */
+  align-items: center;
+}
+
+/* for the tall figures only: stop centering and sit on the right edge of the image column */
+.h\69ghlights__img_tall{
+  justify-self: end;    /* grid alignment */
+  margin-inline: 0;     /* cancels the centering */
+  margin-left: auto;    /* keeps it pushed toward the text in LTR layouts */
+}
+
+/* when the layout stacks on small screens, re-center */
+@media (max-width: 768px){
+  .h\69ghlights__img_tall{
+    justify-self: center;
+    margin-inline: auto;
+  }
+}
+
+/* when the layout is narrower, reduce height + padding so the box doesn't feel tall */
+@media (max-width: 768px){
+  .highlights__img{
+    justify-self: center;
+    margin-inline: auto;
+    height: 200px;            /* tune: 180–200 */
+    border-radius: 0.45rem;
+    /* padding: 0.45rem 0.55rem; */
+    /* padding: 0.5rem 0.55rem; */
+     /* reduce top/bottom and sides */
+  }
+}
+
+/* when the layout is narrower, reduce height + padding so the box doesn't feel tall */
+@media (max-width: 1024px){
+  .highlights__img{
+
+    justify-self: center;
+    margin-inline: auto;
+
+    height: 220px;
+    width: auto;           /* key change: box fits the image */
+    max-width: 100%;       /* prevents overflow on smaller screens */
+    object-fit: contain;
+    /* height: 190px;        */
+    border-radius: 0.75rem;
+    /* padding: 0.55rem 0.55rem;  */
+  }
+}
+
+.highlights__button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
+.highlights-button-prev::after,
+.highlights-button-next::after {
+  content: '';
+}
+
+
+.highlights-button-prev {
+  left: -.5rem;
+}
+
+.highlights-button-next {
+  right: -.5rem;
+}
+
+.highlights-container-horizontal > .highlights-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.highlights-pagination-bullet-active {
+  background-color: var(--first-color);
+}
+
+.highlights-button-prev,
+.highlights-button-next,
+.highlights-pagination-bullet {
   outline: none;
 }
 
@@ -1117,6 +1331,7 @@ img {
 .publication__container {
   background-color: var(--container-color2); 
   color: var(--text-color); 
+  padding-bottom: 2rem;
 
 }
 
@@ -1328,7 +1543,15 @@ img {
 .contact__label {
   font-size: var(--smaller-font-size);
   color: var(--title-color);
+  font-family: inherit, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
 }
+
+.emoji {
+  height: 1em;
+  width: 1em;
+  vertical-align: -0.15em;
+}
+
 
 .contact__input {
   width: 100%;
@@ -1540,6 +1763,7 @@ scrollup {
   .about__container,
   /* .skills__container, */
   .portfolio__content,
+  .highlights__content,
   .colab__container,
   .publication__container,
   .contact__container,
@@ -1665,6 +1889,13 @@ scrollup {
     width: 320px;
   }
   .portfolio__content {
+    align-items: center;
+  }
+
+  .highlights__img {
+    width: 320px;
+  }
+  .highlights__content {
     align-items: center;
   }
 
@@ -1800,6 +2031,29 @@ scrollup {
   .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
     bottom: 0;
   }
+
+  /* ------ */
+  .highlights__content {
+    column-gap: 5rem;
+  }
+  .highlights-portfolio-icon {
+    font-size: 3.5rem;
+  }
+  .highlights-button-prev {
+    left: -3.5rem;
+  }
+  .highlights-button-next {
+    right: -3.5rem;
+  }
+  .highlights-container-horizontal > .highlights-pagination-bullets {
+    bottom: -4.5rem;
+  }
+  .highlights-container-horizontal > .highlights-pagination-bullets.highlights-pagination-bullets-dynamic {
+    bottom: 0;
+  }
+
+  /* ------ */
+
   .testimonial__description {
     margin-bottom: 4rem;
   }

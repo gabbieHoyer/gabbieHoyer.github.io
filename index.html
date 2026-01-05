@@ -45,11 +45,11 @@
                             </a>
                         </li>
 
-                        <li class="nav__item">
+                        <!-- <li class="nav__item">
                             <a href="#portfolio" class="nav__link">
                                 <i class="uil uil-scenery nav__icon"></i> Portfolio
                             </a>
-                        </li>
+                        </li> -->
 
                         <li class="nav__item">
                             <a href="#publication_award" class="nav__link">
@@ -136,10 +136,19 @@
 
                         <div class="home__data">
                             <h1 class="home__title">Gabrielle Hoyer</h1>
-                            <h3 class="home__subtitle">PhD Candidate | Healthcare AI and Digital Twins</h3>
+                            <h3 class="home__subtitle">PhD Candidate | ML/CV for Medical Imaging | Foundation Models | Digital Twins</h3>
                             <p class="home__description">
-                                Developing scalable AI frameworks and digital twin systems that integrate diverse medical imaging data, predictive modeling, and precision analytics to enhance musculoskeletal care and advance clinical outcomes.
+                            I build foundation-model and multimodal ML systems for healthcare. Current focus: musculoskeletal MRI, longitudinal digital twins, and clinical video pipelines for decision support.
                             </p>
+
+                            <!-- <p class="home__description">
+                            My work focuses on foundation models, multimodal representation learning, and longitudinal decision modeling for MRI. I build end-to-end data and evaluation pipelines that translate into clinically meaningful biomarkers and risk prediction.
+                            </p> -->
+
+                            <!-- <h3 class="home__subtitle">PhD Candidate | Healthcare AI and Digital Twins</h3> -->
+                            <!-- <p class="home__description">
+                                Developing scalable AI frameworks and digital twin systems that integrate diverse medical imaging data, predictive modeling, and precision analytics to enhance musculoskeletal care and advance clinical outcomes.
+                            </p> -->
 
                             <a href="#contact" class="button button--flex">
                                 Contact Me <i class="uil uil-message button__icon"></i>
@@ -170,12 +179,30 @@
             
                 <div class="about__container container">
                     <!-- About text -->
-                    <p class="about__description">
+                    <!-- <p class="about__description">
                         <strong>Biomedical Engineer &amp; PhD Candidate</strong> driven by a commitment to bridging advanced AI research with practical, 
                         patient-centered impact. My work blends rigorous scientific methods, multi-stakeholder collaborations, and thoughtful consideration 
                         of clinical workflow to create accessible, forward-looking healthcare solutions. By drawing on a combination of academic training, 
                         stakeholder engagement, and translational partnerships, I aim to ensure that technology moves seamlessly from the lab to the clinic.
+                    </p> -->
+
+                    <!-- <p class="about__description">
+                    <strong>PhD Candidate (UCSF–UC Berkeley) building ML/CV systems for medical imaging</strong> with an emphasis on
+                    foundation models, multimodal representation learning, and longitudinal “digital twin” modeling. I design end-to-end
+                    pipelines—dataset curation + QA/QC, reproducible training/evaluation, and clinically grounded metrics—so models
+                    generalize across heterogeneous scanners/protocols and produce trustworthy biomarkers for downstream prediction and decision support.
+                    </p> -->
+
+                    <p class="about__description">
+                    <strong>PhD Candidate (UCSF and UC Berkeley) building ML/CV systems for clinical data</strong> with an emphasis on
+                    foundation models, multimodal representation learning, and longitudinal decision modeling. I build end-to-end pipelines
+                    that span data curation, QA/QC, reproducible training and evaluation, and deployment-aware validation. My goal is to
+                    develop models that generalize across sites, protocols, and patient populations, and to produce outputs that remain
+                    useful for both patient-facing decisions and hospital operations. My current work centers on musculoskeletal imaging,
+                    and I apply the same systems approach to other clinical data types, including video and clinical text.
                     </p>
+
+
             
                     <!-- Diagram -->
                     <!-- <div class="about__diagram">
@@ -196,11 +223,18 @@
                       
                     <!-- Bullet points -->
                     <h3 class="home__subtitle">Areas of Focus</h3>
-                    <ul class="about__list">
+                    <!-- <ul class="about__list">
                         <li>Approaches for real-world adoption of healthcare innovations</li>
                         <li>User-focused clinical workflow integration and design</li>
                         <li>Collaborative, interdisciplinary leadership and research management</li>
+                    </ul> -->
+
+                    <ul class="about__list">
+                    <li>Foundation models for MRI: robustness, biomarker fidelity, and evaluation tied to clinical endpoints</li>
+                    <li>Multimodal + longitudinal modeling (imaging + tabular + reports) for risk prediction and digital twins</li>
+                    <li>Data/ML systems for real-world translation: QA/QC, reproducibility, privacy, and workflow constraints</li>
                     </ul>
+
             
                     <!-- Info boxes -->
                     <div class="about__info">
@@ -277,6 +311,122 @@
                 </div>
             </section> -->
             
+            <!--==================== HIGHLIGHTS ====================-->
+            <section class="highlights section" id="highlights">
+                <h2 class="section__title">Research Highlights</h2>
+                <span class="section__subtitle">Flagship papers, preprints, and works in progress</span>
+
+                <div class="highlights__container container swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <!--============= Highlight 1 ==============-->
+                        <div class="highlights__content grid swiper-slide">
+                            <img src="assets/img/overview/Figure1.png" alt="" class="highlights__img_tall">
+                            <div class="portfolio__data">
+                                    <span class="highlights__venue">Paper • npj Digital Medicine • 2025</span>
+                                    <h3 class="highlights__title">Foundations of a Knee Joint Digital Twin from qMRI Biomarkers</h3>
+                                    <p class="highlights__description">
+                                    Digital twin framework built from quantitative MRI biomarkers to model OA progression and knee replacement risk.
+                                    </p>
+                                    <div class="highlights__links">
+                                    <a class="button button--flex button--tiny" href="https://doi.org/10.1038/s41746-025-01507-3" target="_blank" rel="noopener noreferrer">Paper</a>
+                                    <a class="button button--flex button--tiny" href="https://github.com/gabbieHoyer/OAI_digital_twins" target="_blank" rel="noopener noreferrer">Code</a>
+                                    <!-- <a class="button button--flex button--tiny" href="https://doi.org/10.6084/m9.figshare.28656941.v1" target="_blank" rel="noopener noreferrer">Supplement</a> -->
+                                    </div>
+                            </div>
+                        </div>
+
+                        <!--============= Highlight 2 =============-->
+                        <div class="highlights__content grid swiper-slide">
+                            <img src="assets/img/overview/overview_figure_1_small.png" alt="" class="highlights__img_tall">
+                            <div class="portfolio__data">
+
+                                <!-- <h4 class="highlights__subtitle">Preprint • 2025 • Under peer review</h4> -->
+                                <span class="highlights__venue">Preprint • 2025 • Under peer review</span>
+                                <h3 class="highlights__title">Clinical Utility of Foundation Segmentation Models in Musculoskeletal MRI</h3>
+                                <p class="highlights__description">
+                                Benchmarking foundation models by biomarker fidelity + predictive outcomes across heterogeneous MRI protocols.
+                                </p>
+                                <div class="highlights__links">
+                                <a class="button button--flex button--tiny" href="https://arxiv.org/abs/2501.13376" target="_blank" rel="noopener noreferrer">Preprint</a>
+                                <a class="button button--flex button--tiny" href="https://github.com/gabbieHoyer/AutoMedLabel" target="_blank" rel="noopener noreferrer">Code</a>
+                                <!-- <a class="button button--flex button--tiny" href="https://figshare.com/s/b4278012e706054331f3?file=51780023" target="_blank" rel="noopener noreferrer">Supplement</a> -->
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--============= Highlight 3 =============-->
+                        <div class="highlights__content grid swiper-slide">
+                            <img src="assets/img/overview/RL_digital_twin_redone.png" alt="" class="highlights__img">
+                            <div class="portfolio__data">
+
+                                <span class="highlights__venue">Whitepaper • 2025 • In progress</span>
+                                <h3 class="highlights__title">Offline RL on a Longitudinal Knee Digital Twin</h3>
+                                <p class="highlights__description">
+                                Clinically informed intervention design with offline RL (CQL/IQL) + off-policy evaluation on longitudinal biomarker trajectories.
+                                </p>
+                                <div class="highlights__links">
+                                <a class="button button--justify button--tiny" href="https://drive.google.com/file/d/1jLQxh5WgQqqoW8HLYs4YS4SCU0e_d4_-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Whitepaper</a>
+                                <a class="button button--justify button--tiny" href="#modal-digital-twin" rel="noopener noreferrer">Overview</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--============= Highlight 4 =============-->
+                        <div class="highlights__content grid swiper-slide">
+                            <img src="assets/img/airway_big.jpg" alt="" class="highlights__img">
+                            <div class="portfolio__data">
+
+                                <span class="highlights__venue">NSF I-Corps • 2021 • Clinical Video ML Systems</span>
+                                <h3 class="highlights__title">Privacy-Preserving Video Laryngoscopy Data Pipeline</h3>
+                                <p class="highlights__description">
+                                Automated clinical video processing (trimming + sensitive-object detection + blurring) plus stakeholder-driven translation and deployment strategy.
+                                </p>
+                                <div class="highlights__links">
+                                <a class="button button--flex button--tiny" href="https://youtu.be/zdABEzKRS0k" target="_blank" rel="noopener noreferrer">Demo</a>
+                                <a class="button button--flex button--tiny" href="https://github.com/gabbieHoyer/VLS_auto_trimmer" target="_blank" rel="noopener noreferrer">Code</a>
+                                <!-- <a class="button button--flex button--tiny" href="#modal-medical-data" rel="noopener noreferrer">Details</a> -->
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!--============= Highlight 5 =============-->
+                        <div class="highlights__content grid swiper-slide">
+                            <!-- <img src="assets/img/airway_big.jpg" alt="" class="highlights__img"> -->
+                            <div class="portfolio__data">
+
+                                <span class="highlights__venue">In preparation • 2025 • In progress</span>
+                                <h3 class="highlights__title">Physically Conditioned Multi-Task Knee MRI Understanding (DINOv3)</h3>
+                                <p class="highlights__description">
+                                Self-supervised backbone for cross-plane label transfer, multi-sequence segmentation, anomaly detection, and grounded image–report alignment (~900 studies).
+                                </p>
+                                <div class="highlights__links">
+                                <!-- <a class="button button--flex button--tiny" href="https://drive.google.com/file/d/1dLH41Yg6KhAbKscgqG4eB20DObuQBILS/view?usp=sharing" target="_blank" rel="noopener noreferrer">Project Brief</a> -->
+                                <a class="button button--flex button--tiny" href="mailto:gabbie.hoyer@ucsf.edu">Code (by request)</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Add more slides similarly... -->
+
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    
+                </div>
+            </section>
+
 
             <!--==================== QUALIFICATION ====================-->
 
@@ -861,14 +1011,13 @@
 
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
-                <h2 class="section__title">Portfolio</h2>
-                <span class="section__subtitle">Previous work</span>
+                <h2 class="section__title">Previous Work</h2>
+                <span class="section__subtitle">Projects + Research</span>
 
                 <div class="portfolio__container container swiper-container">
                     <div class="swiper-wrapper">
                         <!--=============== PORTFOLIO 1 ===============-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <!-- <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img"> -->
+                        <!-- <div class="portfolio__content grid swiper-slide">
                             <img src="assets/img/airway_big.jpg" alt="" class="portfolio__img">
     
                             <div class="portfolio__data">
@@ -879,7 +1028,7 @@
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
     
                         <!--=============== PORTFOLIO 2 ===============-->
                         <div class="portfolio__content grid swiper-slide">
@@ -975,7 +1124,7 @@
                                 <!-- <i class="uil uil-check-circle services__modal-icon"></i> -->
                                 <h3 class="publication__description_title">Design and Evaluation of Automatic System for Medical Dataset Development</h3>
                                 <p class="publication__description">
-                                    <strong>Hoyer, G.</strong>, Tong, M.W., Bhattacharjee, R. et al. Clinical Utility of Foundation Segmentation Models in Musculoskeletal MRI: Biomarker Fidelity and Predictive Outcomes. (2025). (under review at <em>Nat. Commun.</em>).
+                                    <strong>Hoyer, G.</strong>, Tong, M.W., Bhattacharjee, R. et al. Clinical Utility of Foundation Segmentation Models in Musculoskeletal MRI: Biomarker Fidelity and Predictive Outcomes. (2025). (under peer review).
                                 </p>
                                 <li class="publication__resource-links">
                                     <a href="https://github.com/gabbieHoyer/AutoMedLabel" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
@@ -1019,6 +1168,27 @@
                                         <span class="publication__link-text">Supplementary Data</span>
                                     </a>
                                 </li>
+                            </div>
+
+                            <!--=============== PUBLICATION new 1 ===============-->
+                            <div class="publication__data">
+                                <!-- <i class="uil uil-check-circle services__modal-icon"></i> -->
+                                <h3 class="publication__description_title">Fully automatic thigh muscle segmentation for the Osteoarthritis Initiative: a foundation model approach. </h3>
+                                <p class="publication__description">
+                                    Ziegeler K.*, <strong>Hoyer, G.*</strong>,  Liu, F., et al. Fully automatic thigh muscle segmentation for the Osteoarthritis Initiative: a foundation model approach. 
+                                    (2025). (under peer review).
+                                </p>
+                            </div>
+
+                            <!--=============== PUBLICATION new 2 ===============-->
+                            <div class="publication__data">
+                                <!-- <i class="uil uil-check-circle services__modal-icon"></i> -->
+                                <h3 class="publication__description_title">Knee joint effusion-synovitis volume quantification on MRI. </h3>
+                                <p class="publication__description">
+                                    Marth, A.A.*, Liu, F.*, <strong>Hoyer, G.</strong>, et al. Knee joint effusion-synovitis volume quantification on MRI. 
+                                    (2025). (under peer review).
+                                    <!-- <em>Osteoarthritis and Cartilage</em> (2025). -->
+                                </p>
                             </div>
 
                             <!--=============== PUBLICATION 1 ===============-->
@@ -1514,16 +1684,15 @@
                                     </div>
                                 </div>
                                 <!-- Geometric Deep Learning -->
-                                <div class="skills__data">
+                                <!-- <div class="skills__data">
                                     <div class="skills__titles">
                                         <div class="skills__name-wrapper">
                                             <h3 class="skills__name">Geometric Deep Learning</h3>
-                                            <!-- <span class="skills__name-subtitle">(PyTorch Geometric, DGL, Graph Neural Networks)</span> -->
                                             <span class="skills__name-subtitle">(PyTorch Geometric, Graph Neural Networks)</span>
                                         </div>
                                         <div class="skills__dots" data-level="3" title="Proficient (3/5)"></div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Computer Vision & Medical Imaging -->
                                 <div class="skills__data">
                                     <div class="skills__titles">
@@ -1612,7 +1781,8 @@
                                     <div class="skills__titles">
                                         <div class="skills__name-wrapper">
                                             <h3 class="skills__name">API & Integration</h3>
-                                            <span class="skills__name-subtitle">(RESTful API design, WebSockets, GraphQL)</span>
+                                            <span class="skills__name-subtitle">(RESTful API design, WebSockets)</span>  
+                                            <!-- , GraphQL -->
                                         </div>
                                         <div class="skills__dots" data-level="3" title="Proficient (3/5)"></div>
                                     </div>
@@ -1623,7 +1793,8 @@
                                         <div class="skills__name-wrapper">
                                             <h3 class="skills__name">DevOps & Cloud</h3>
                                             <!-- <span class="skills__name-subtitle">(Docker, Kubernetes basics, GitHub Actions, AWS/GCP/Azure)</span> -->
-                                            <span class="skills__name-subtitle">(Docker, AWS/GCP/Azure)</span>
+                                            <span class="skills__name-subtitle">(Docker, AWS/GCP)</span>
+                                            <!-- /Azure -->
                                         </div>
                                         <div class="skills__dots" data-level="3" title="Proficient (3/5)"></div>
                                     </div>
@@ -1840,37 +2011,63 @@
 
                 <div class="contact__container container grid">
                     <div>
-
-                        <!-- <div class="contact__information">
-                            <i class="uil uil-phone contact__icon"></i>
-                            <div>
-                                <h3 class="contact__title">Call Me</h3>
-                                <span class="contact__subtitle">801-631-0750</span>
-                            </div>
-                        </div> -->
-
                         <div class="contact__information">
                             <i class="uil uil-envelope contact__icon"></i>
                             <div>
                                 <h3 class="contact__title">Email</h3>
                                 <span class="contact__subtitle">
-                                    gabbie.hoyer@ucsf.edu<br> 
+                                    gabrielle.hoyer7@gmail.com<br> 
                                     gabrielle_hoyer@berkeley.edu
                                 </span>
                             </div>
                         </div>
 
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
+                        <!-- <div class="home__social"> -->
+                        <div class="contact__information"> 
+                            <a href="https://www.linkedin.com/in/gabrielle-hoyer/" target="_blank" class="contact__icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
                             <div>
-                                <h3 class="contact__title">Location</h3>
+                                <h3 class="contact__title">LinkedIn</h3>
                                 <span class="contact__subtitle">
-                                    Department of Radiology and Biomedical Imaging, UCSF<br>
-                                    1700 4th St., Suite 201<br>
-                                    San Francisco, CA 94158
+                                    @gabrielle-hoyer
                                 </span>
                             </div>
                         </div>
+
+                        <div class="contact__information"> 
+
+                            <a href="https://github.com/gabbieHoyer" target="_blank" class="contact__icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                            <div>
+                                <h3 class="contact__title">GitHub</h3>
+                                <span class="contact__subtitle">
+                                    @gabbieHoyer
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information"> 
+
+                            <a href="https://orcid.org/0000-0002-1694-1097" target="_blank" class="contact__icon">
+                                <img src="assets/img/ORCID-iD_icon_vector.svg" alt="ORCID" style="width:24px; height:24px;">
+                            </a>
+                            <div>
+                                <h3 class="contact__title">ORCID</h3>
+                                <span class="contact__subtitle">
+                                    0000-0002-1694-1097
+                                </span>
+                            </div>
+                        </div>
+                            <!-- <a href="https://radiology.ucsf.edu/research/labs/musculoskeletal-quantitative-imaging/labs/majumdar-lab" target="_blank" class="home__social-icon">
+                                <i class="uil uil-flask"></i>
+                            </a> -->
+
+
+
+                        
+
                     </div>
 
                     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf6ESNGEACG4wO3oki--77hBDzo_hSsY_J4QxU9EA1Cd_CKSw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" class="contact__form grid">
@@ -1884,13 +2081,17 @@
                                 <input type="email" name="entry.356448002" id="entry.356448002" class="contact__input" required>
                             </div>
                         </div>
-                        <div class="contact__content">
+                        <!-- <div class="contact__content">
                             <label for="entry.1516940592" class="contact__label">Project</label>
                             <input type="text" name="entry.1516940592" id="entry.1516940592" class="contact__input">
-                        </div>
+                        </div> -->
                         <div class="contact__content">
-                            <label for="entry.133640554" class="contact__label">Message</label>
-                            <textarea name="entry.133640554" id="entry.133640554" cols="0" rows="7" class="contact__input"></textarea>
+                            <label for="entry.133640554" class="contact__label">
+                                Message ...this actually works! :D but email/linkedIn would be better
+                                <img class="emoji" alt="🫰" src="https://twemoji.maxcdn.com/v/latest/svg/1faf0.svg">
+
+                            </label>
+                            <textarea name="entry.133640554" id="entry.133640554" cols="0" rows="3" class="contact__input"></textarea>
                         </div>
 
                         <span class="contact__required_field">
@@ -1920,12 +2121,16 @@
                     </div>
 
                     <ul class="footer__links">
+
+                        <li>
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
                         <li>
                             <a href="#services" class="footer__link">Projects</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#portfolio" class="footer__link">Portfolio</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#publication_award" class="footer__link">Publications</a>
                         </li>
