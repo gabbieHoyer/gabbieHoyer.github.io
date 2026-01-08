@@ -104,6 +104,7 @@
 
     /* Theme-able background for the image panel */
     --highlights-img-bg: rgba(0, 0, 0, 0.03);
+    --highlights-img-bg-no-change: color-mix(in srgb, var(--first-color) 100%, transparent);
 
 }
 
@@ -143,6 +144,9 @@ body.dark-theme {
   /* --highlights-img-bg: var(--first-color); */
 
   --highlights-img-bg: color-mix(in srgb, var(--first-color) 30%, transparent);
+
+  --highlights-img-bg-no-change: color-mix(in srgb, var(--first-color) 30%, transparent);
+
   
   /* If var(--first-color) is too strong, try this instead:
   --highlights-img-bg: color-mix(in srgb, var(--first-color) 18%, transparent);
@@ -1132,6 +1136,28 @@ img {
   display: block;
   height: 220px;         /* keep your current scale */
   width: auto;           /* key change: box fits the image */
+  max-width: 90%;       /* prevents overflow on smaller screens */
+  object-fit: contain;
+
+  margin-inline: auto;   /* centers the now-shrunk box */
+  /* If you prefer grid-native centering, you can add:
+     justify-self: center;
+  */
+
+  border-radius: 0.45rem;
+   /* 0.75rem; */
+  background: var(--highlights-img-bg);
+  padding: 0.75rem;
+  /* padding: 0.70rem 0.55rem;   */
+
+  transition: background-color 0.2s ease;
+}
+
+
+.highlights__img2{
+  display: block;
+  height: 220px;         /* keep your current scale */
+  width: auto;           /* key change: box fits the image */
   max-width: 100%;       /* prevents overflow on smaller screens */
   object-fit: contain;
 
@@ -1141,7 +1167,7 @@ img {
   */
 
   border-radius: 0.75rem;
-  background: var(--highlights-img-bg);
+  background: var(--highlights-img-bg-no-change);
   padding: 0.75rem;
   /* padding: 0.70rem 0.55rem;   */
 
@@ -1219,6 +1245,36 @@ img {
   margin-left: auto;    /* keeps it pushed toward the text in LTR layouts */
 }
 
+
+
+/* when the layout is narrower, reduce height + padding so the box doesn't feel tall */
+@media (min-width: 769px) and (max-width: 1024px){
+  .highlights__img{
+
+    justify-self: center;
+    margin-inline: auto;
+
+    height: 220px;
+    width: auto;           /* key change: box fits the image */
+    max-width: 100%;       /* prevents overflow on smaller screens */
+    object-fit: contain;
+    /* height: 190px;        */
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    /* padding: 0.55rem 0.55rem;  */
+  }
+}
+
+.highlights__button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
+.highlights-button-prev::after,
+.highlights-button-next::after {
+  content: '';
+}
+
+
 /* when the layout stacks on small screens, re-center */
 @media (max-width: 768px){
   .h\69ghlights__img_tall{
@@ -1232,28 +1288,52 @@ img {
   .highlights__img{
     justify-self: center;
     margin-inline: auto;
-    height: 200px;            /* tune: 180–200 */
+    height: 200px;            /* 200px;    tune: 180–200 */
+    width: auto;           /* key change: box fits the image */
+    max-width: 100%;        /* prevents overflow on smaller screens */
+    object-fit: contain;
+    /* border-radius: 0.45rem; */
+
+
     border-radius: 0.45rem;
+    /* padding: 0.75rem; */
+
     /* padding: 0.45rem 0.55rem; */
     /* padding: 0.5rem 0.55rem; */
      /* reduce top/bottom and sides */
   }
 }
 
+/* .highlights__img{
+  height: clamp(200px, 22vw, 220px);
+  padding: clamp(0.55rem, 1.2vw, 0.75rem);
+  max-width: clamp(90%, 95%, 100%);
+}
+ */
+
+
+/* when the layout is narrower, reduce height + padding so the box doesn't feel tall */
+@media (max-width: 768px){
+  .highlights__img2{
+    justify-self: center;
+    margin-inline: auto;
+    height: 180px;            /* tune: 180–200 */
+    border-radius: 0.55rem;
+  }
+}
+
 /* when the layout is narrower, reduce height + padding so the box doesn't feel tall */
 @media (max-width: 1024px){
-  .highlights__img{
+  .highlights__img2{
 
     justify-self: center;
     margin-inline: auto;
 
-    height: 220px;
+    height: 180px;
     width: auto;           /* key change: box fits the image */
     max-width: 100%;       /* prevents overflow on smaller screens */
     object-fit: contain;
-    /* height: 190px;        */
-    border-radius: 0.75rem;
-    /* padding: 0.55rem 0.55rem;  */
+    border-radius: 0.55rem;
   }
 }
 
